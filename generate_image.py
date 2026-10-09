@@ -1,14 +1,21 @@
 # generate_image.py
-from config import OPENAI_API_KEY
+from config import OPENROUTER_API_KEY, OPENROUTER_MODEL, OPENAI_API_KEY
 from prompts import IMAGE_PROMPT
 from openai import OpenAI
 
-client = OpenAI(api_key=OPENAI_API_KEY)
+# Cliente para o OpenRouter (Geração de Texto)
+openrouter_client = OpenAI(
+    base_url="https://openrouter.ai/api/v1",
+    api_key=OPENROUTER_API_KEY
+)
+
+# Cliente original da OpenAI (Para gerar imagens com DALL-E)
+openai_client = OpenAI(api_key=OPENAI_API_KEY)
 
 def generate_image_description(topic):
     prompt = IMAGE_PROMPT.format(topic=topic)
-    response = client.chat.completions.create(
-        model="gpt-4o",
+    response = openrouter_client.chat.completions.create(
+        model=OPENROUTER_MODEL,
         messages=[{"role": "system", "content": "You are a professional image description writer."},
                   {"role": "user", "content": prompt}],
         max_tokens=300
@@ -17,7 +24,7 @@ def generate_image_description(topic):
 
 
 def generate_image(image_description):
-    response = client.images.generate(
+    response = openai_client.images.generate(
         model="dall-e-3",
         prompt=image_description,
         n=1,

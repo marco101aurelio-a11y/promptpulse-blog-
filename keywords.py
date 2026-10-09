@@ -1,6 +1,14 @@
 # keywords.py
 
 KEYWORDS_LIST = [
-    {"topic": "My Awesome Blog Post", "keywords": [
-        "my", "awesome", "blog", "post"]},
+    {
+        "topic": "Como Usar Inteligência Artificial para Aumentar a Produtividade no Trabalho",
+        "keywords": [
+            "inteligencia artificial",
+            "produtividade",
+            "ferramentas de ia",
+            "automacao de tarefas",
+            "melhores apps de ia"
+        ]
+    }
 ]
