@@ -3,7 +3,7 @@ import { getAllPosts } from '@/lib/posts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://promptpulse.com.br';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.promptpulse.com.br';
 
   const postUrls = posts.map((post) => ({
     url: `${baseUrl}/posts/${post.slug}`,

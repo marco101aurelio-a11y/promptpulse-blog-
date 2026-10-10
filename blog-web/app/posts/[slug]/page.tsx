@@ -27,12 +27,12 @@ export async function generateMetadata({ params }: PostPageProps) {
 
   if (!post) {
     return {
-      title: 'Artigo não encontrado | NexusTech AI',
+      title: 'Artigo não encontrado | PromptPulse',
     };
   }
 
   return {
-    title: `${post.title} | NexusTech AI`,
+    title: `${post.title} | PromptPulse`,
     description: post.excerpt,
     openGraph: {
       title: post.title,
@@ -62,17 +62,32 @@ export default async function PostPage({ params }: PostPageProps) {
   const allPosts = getAllPosts();
   const relatedPosts = allPosts.filter((p) => p.slug !== post.slug).slice(0, 2);
 
-  // Schema.org JSON-LD para Google Rich Snippets
+  // Schema.org JSON-LD para Google Rich Snippets e Recomendação por IAs (GEO)
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://www.promptpulse.com.br/posts/${post.slug}`,
+    },
     headline: post.title,
     description: post.excerpt,
     image: post.coverImage,
     datePublished: post.date,
+    dateModified: post.date,
     author: {
       '@type': 'Person',
       name: post.author.name,
+      jobTitle: post.author.role,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'PromptPulse',
+      url: 'https://www.promptpulse.com.br',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://www.promptpulse.com.br/favicon.ico',
+      },
     },
   };
 

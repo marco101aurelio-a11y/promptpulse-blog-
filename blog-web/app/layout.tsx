@@ -19,14 +19,14 @@ export const metadata: Metadata = {
   description: 'Descubra tutoriais práticos, ferramentas de IA, análises comparativas e estratégias de automação para transformar sua produtividade.',
   keywords: ['Inteligência Artificial', 'Produtividade', 'Automação', 'ChatGPT', 'DeepSeek', 'Prompts', 'Tecnologia'],
   authors: [{ name: 'Equipe PromptPulse' }],
-  metadataBase: new URL('https://promptpulse.com.br'),
+  metadataBase: new URL('https://www.promptpulse.com.br'),
   openGraph: {
     title: 'PromptPulse | Inteligência Artificial & Produtividade',
     description: 'Tutoriais práticos, ferramentas de IA e estratégias para economizar tempo e alavancar sua carreira.',
     type: 'website',
     locale: 'pt_BR',
     siteName: 'PromptPulse',
-    url: 'https://promptpulse.com.br',
+    url: 'https://www.promptpulse.com.br',
   },
 };
 
