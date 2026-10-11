@@ -2,6 +2,7 @@
 from config import OPENROUTER_API_KEY, OPENROUTER_MODEL, DEFAULT_LANGUAGE
 from prompts import get_random_seo_blog_post_prompt
 from keywords import KEYWORDS_LIST
+from internal_linking import get_existing_posts, build_internal_linking_instructions
 from openai import OpenAI
 
 client = OpenAI(
@@ -15,10 +16,16 @@ LANG_MAP = {
     "es": "Spanish"
 }
 
-def generate_blog_post(topic, keywords, language=DEFAULT_LANGUAGE):
+def generate_blog_post(topic, keywords, language=DEFAULT_LANGUAGE, enable_internal_linking=True):
     prompt_template = get_random_seo_blog_post_prompt()
     prompt = prompt_template.format(topic=topic, keywords=", ".join(keywords))
     
+    if enable_internal_linking:
+        existing_posts = get_existing_posts()
+        linking_instructions = build_internal_linking_instructions(existing_posts, current_topic=topic)
+        if linking_instructions:
+            prompt += f"\n{linking_instructions}"
+            
     lang_name = LANG_MAP.get(language, "English")
     
     response = client.chat.completions.create(

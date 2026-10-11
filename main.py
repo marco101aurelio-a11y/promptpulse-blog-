@@ -73,11 +73,12 @@ def main():
         image_downloaded = download_image(image_url, local_img_path)
 
         # 5. Publicação no Blog Next.js (Vercel)
-        print("Salvando artigo no Blog Next.js...")
+        category = item.get("category", "Inteligência Artificial")
         post_slug = save_to_nextjs_blog(
             title=topic,
             content=optimized_post,
             image_url=image_url,
+            category=category,
             tags=keywords
         )
         save_to_file(topic_directory, "blog_slug.txt", post_slug)
