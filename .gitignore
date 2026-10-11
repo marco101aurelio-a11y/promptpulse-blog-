@@ -1,3 +1,7 @@
 blog_posts
 __pycache__
 blog_topics.json
+.env
+.env.*
+!.env.example
+node_modules/

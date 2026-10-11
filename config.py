@@ -6,13 +6,13 @@ try:
 except ImportError:
     pass
 
-# Chaves de API para geração de texto e imagens
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "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")
+# Chaves de API para geração de texto e imagens (carregadas a partir do .env)
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
 # DeepSeek V3 via OpenRouter (Modelo recomendado por custo-benefício)
 OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "deepseek/deepseek-chat")
 
 # Chave da API do Pexels para imagens gratuitas de alta qualidade
-PEXELS_API_KEY = os.getenv("PEXELS_API_KEY", "qEgmZfIJNpFvvuiygDzilSwxZsUpE7A8OMjoLA9wTQ6Z19WBxLqI8y8k")
+PEXELS_API_KEY = os.getenv("PEXELS_API_KEY", "")
 
 # Configurações do WordPress REST API para postagem automática
 WORDPRESS_URL = os.getenv("WORDPRESS_URL", "")
