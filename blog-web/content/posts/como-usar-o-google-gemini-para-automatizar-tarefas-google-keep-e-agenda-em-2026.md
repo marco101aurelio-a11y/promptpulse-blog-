@@ -11,8 +11,8 @@ tags:
   - "produtividade google workspace"
   - "organizar rotina com gemini"
 author:
-  name: "Marco Tech"
-  avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
+  name: "Marco Aurélio"
+  avatar: "/marco-aurelio.jpg"
   role: "Especialista em IA & Produtividade"
 readTime: "5 min de leitura"
 featured: false

@@ -6,8 +6,8 @@ coverImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=f
 category: "Produtividade & IA"
 tags: ["Prompts", "Produtividade", "Engenharia de Prompt", "Rotina"]
 author:
-  name: "Marco Tech"
-  avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
+  name: "Marco Aurélio"
+  avatar: "/marco-aurelio.jpg"
   role: "Especialista em IA & Produtividade"
 readTime: "4 min de leitura"
 featured: false

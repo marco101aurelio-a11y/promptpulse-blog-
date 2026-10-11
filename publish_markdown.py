@@ -13,7 +13,7 @@ def slugify(text):
     text = re.sub(r'[^\w\s-]', '', text).strip().lower()
     return re.sub(r'[-\s]+', '-', text)
 
-def save_to_nextjs_blog(title, content, image_url, category="Inteligência Artificial", tags=None, author_name="Marco Tech"):
+def save_to_nextjs_blog(title, content, image_url, category="Inteligência Artificial", tags=None, author_name="Marco Aurélio"):
     """
     Salva o artigo gerado diretamente na pasta content/posts do blog Next.js.
     """
@@ -48,7 +48,7 @@ tags:
 {tags_formatted}
 author:
   name: "{author_name}"
-  avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
+  avatar: "/marco-aurelio.jpg"
   role: "Especialista em IA & Produtividade"
 readTime: "5 min de leitura"
 featured: false

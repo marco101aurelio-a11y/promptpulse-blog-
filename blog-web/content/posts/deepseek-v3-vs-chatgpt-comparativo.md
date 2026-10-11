@@ -6,8 +6,8 @@ coverImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=f
 category: "Inteligência Artificial"
 tags: ["DeepSeek", "OpenAI", "ChatGPT", "Comparativo", "Modelos de IA"]
 author:
-  name: "Marco Tech"
-  avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
+  name: "Marco Aurélio"
+  avatar: "/marco-aurelio.jpg"
   role: "Especialista em IA & Produtividade"
 readTime: "6 min de leitura"
 featured: false

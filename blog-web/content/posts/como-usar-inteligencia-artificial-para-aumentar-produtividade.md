@@ -6,8 +6,8 @@ coverImage: "https://images.pexels.com/photos/8439093/pexels-photo-8439093.jpeg?
 category: "Produtividade & IA"
 tags: ["Inteligência Artificial", "Produtividade", "Automação", "ChatGPT", "Carreira"]
 author:
-  name: "Marco Tech"
-  avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
+  name: "Marco Aurélio"
+  avatar: "/marco-aurelio.jpg"
   role: "Especialista em IA & Produtividade"
 readTime: "5 min de leitura"
 featured: true

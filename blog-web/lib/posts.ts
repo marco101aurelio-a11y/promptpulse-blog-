@@ -48,9 +48,9 @@ export function getAllPosts(): Post[] {
         coverImage: data.coverImage || 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80',
         category: data.category || 'Inteligência Artificial',
         author: data.author || {
-          name: 'Equipe TechPulse',
-          avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
-          role: 'Especialista em IA & Tech'
+          name: 'Marco Aurélio',
+          avatar: '/marco-aurelio.jpg',
+          role: 'Especialista em IA & Produtividade'
         },
         tags: data.tags || ['IA', 'Tecnologia', 'Produtividade'],
         readTime: data.readTime || calculatedReadTime,
@@ -82,9 +82,9 @@ export function getPostBySlug(slug: string): Post | null {
       coverImage: data.coverImage || 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80',
       category: data.category || 'Inteligência Artificial',
       author: data.author || {
-        name: 'Equipe TechPulse',
-        avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
-        role: 'Especialista em IA & Tech'
+        name: 'Marco Aurélio',
+        avatar: '/marco-aurelio.jpg',
+        role: 'Especialista em IA & Produtividade'
       },
       tags: data.tags || ['IA', 'Tecnologia', 'Produtividade'],
       readTime: data.readTime || calculatedReadTime,
