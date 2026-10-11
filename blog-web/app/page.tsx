@@ -7,8 +7,9 @@ import { Sparkles, TrendingUp, Cpu, Zap, Compass } from 'lucide-react';
 
 export default function HomePage() {
   const allPosts = getAllPosts();
-  const featuredPost = allPosts.find((p) => p.featured) || allPosts[0];
-  const regularPosts = allPosts.filter((p) => p.slug !== featuredPost?.slug);
+  // O artigo mais recente publicado (allPosts[0]) assume SEMPRE o grande Destaque Principal (Hero) da Home
+  const featuredPost = allPosts[0];
+  const regularPosts = allPosts.slice(1);
   const categories = getAllCategories();
 
   return (

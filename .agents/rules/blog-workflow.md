@@ -15,7 +15,11 @@ Sempre que um novo artigo for solicitado ou gerado para o blog PromptPulse:
    - Salvar o markdown diretamente em `blog-web/content/posts/`.
    - Fazer commit e push automático para a branch `main` do GitHub com o usuário `marco101aurelio-a11y`.
 
-4. **Entrega Imediata no Chat:**
+4. **Destaque Dinâmico no Hero da Home:**
+   - O artigo mais recente publicado (ordenado por data) assume AUTOMATICAMENTE o banner principal (Hero) na Home do blog.
+   - Os artigos anteriores são deslocados para o grid de "Últimas Publicações".
+
+5. **Entrega Imediata no Chat:**
    Assim que o artigo for gerado e publicado, SEMPRE entregar no chat um relatório contendo:
    - 📌 **Título e Categoria**
    - ⏱️ **Tempo Estimado de Leitura**

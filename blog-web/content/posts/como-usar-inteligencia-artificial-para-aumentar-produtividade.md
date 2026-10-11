@@ -10,7 +10,7 @@ author:
   avatar: "/marco-aurelio.jpg"
   role: "Especialista em IA & Produtividade"
 readTime: "5 min de leitura"
-featured: true
+featured: false
 ---
 
 Já pensou que a inteligência artificial (IA) pode ser o impulso que faltava para turbinar sua produtividade? Não é coisa de filme futurista – ela já está aqui, acessível e pronta para otimizar seu dia a dia. Neste artigo, vamos mostrar como a IA pode se tornar sua aliada no trabalho. Prepare-se: você vai se perguntar como vivia sem ela!
