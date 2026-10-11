@@ -35,7 +35,7 @@ def main():
         active_keywords_list = format_suggestions_for_generation(raw_suggestions, max_results=3)
     else:
         print("=== Usando a lista de palavras-chave estática do keywords.py ===")
-        active_keywords_list = KEYWORDS_LIST[:2] # Limita aos 2 primeiros para teste piloto seguro
+        active_keywords_list = KEYWORDS_LIST[:1] # Gera o primeiro artigo do cluster Gemini
 
     print(f"Total de tópicos a processar: {len(active_keywords_list)}")
     print("="*60)

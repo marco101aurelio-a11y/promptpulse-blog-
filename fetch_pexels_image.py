@@ -34,22 +34,31 @@ def get_pexels_image(query, api_key=PEXELS_API_KEY):
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
     }
     
-    req = urllib.request.Request(url, headers=headers)
     try:
+        req = urllib.request.Request(url, headers=headers)
         with urllib.request.urlopen(req) as response:
             data = json.loads(response.read().decode('utf-8'))
             if data.get("photos"):
-                # Retorna o link da imagem no formato "large" ou "landscape"
                 photo = data["photos"][0]
                 image_url = photo.get("src", {}).get("large") or photo.get("src", {}).get("original")
                 if image_url:
                     print(f"Imagem encontrada no Pexels para '{query}': {image_url}")
                     return image_url
-            print(f"Nenhuma imagem encontrada no Pexels para '{query}'. Usando fallback...")
+            
+            # Se não encontrou foto com o título longo, tenta termo de tecnologia/IA em inglês
+            print(f"Nenhuma foto encontrada para '{query}'. Buscando termo alternativo no Pexels...")
+            alt_url = "https://api.pexels.com/v1/search?query=artificial+intelligence+workspace+technology&per_page=15&orientation=landscape"
+            req_alt = urllib.request.Request(alt_url, headers=headers)
+            with urllib.request.urlopen(req_alt) as alt_response:
+                alt_data = json.loads(alt_response.read().decode('utf-8'))
+                if alt_data.get("photos"):
+                    idx = sum(ord(c) for c in query) % len(alt_data["photos"])
+                    alt_photo = alt_data["photos"][idx]
+                    return alt_photo.get("src", {}).get("large") or alt_photo.get("src", {}).get("original")
     except Exception as e:
         print(f"Erro na requisição da API do Pexels: {e}. Usando fallback...")
         
-    # Fallback caso dê erro na API ou a busca retorne vazia
+    # Fallback caso dê erro na API
     index = sum(ord(c) for c in query) % len(TECH_FALLBACK_IMAGES)
     return TECH_FALLBACK_IMAGES[index]
 

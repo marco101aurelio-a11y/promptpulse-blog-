@@ -60,7 +60,7 @@ featured: false
     with open(file_path, 'w', encoding='utf-8') as f:
         f.write(full_post_content)
 
-    print(f"✅ Artigo salvo com sucesso no Blog Next.js!")
-    print(f"📄 Arquivo: {file_path}")
-    print(f"🔗 Slug do Artigo: /posts/{slug}")
+    print(f"[OK] Artigo salvo com sucesso no Blog Next.js!")
+    print(f"[Arquivo]: {file_path}")
+    print(f"[Slug]: /posts/{slug}")
     return slug

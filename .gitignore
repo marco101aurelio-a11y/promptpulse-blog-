@@ -6,3 +6,4 @@ blog_topics.json
 !.env.example
 node_modules/
 .tmp.*
+temp_images/
