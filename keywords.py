@@ -1,60 +1,60 @@
 # keywords.py
-# Cluster de palavras-chave de cauda longa para dominar buscas orgânicas de IA no Google
+# Cluster de Alta Conversão & Autoridade: Google Gemini + Workspace + Automação Nativa com IA
 
 KEYWORDS_LIST = [
     {
-        "topic": "Prompts de ChatGPT para Marketing Digital e Redes Sociais em 2026",
-        "category": "Prompts & Conteúdo",
+        "topic": "Como Usar o Google Gemini para Automatizar Tarefas, Google Keep e Agenda em 2026",
+        "category": "Automação Google Workspace",
         "keywords": [
-            "prompts chatgpt marketing",
-            "copywriting com ia",
-            "prompts para instagram",
-            "automacao de conteudo",
-            "estrategia de marketing com ia"
+            "gemini google keep automacao",
+            "integrar gemini e google agenda",
+            "google tarefas com inteligencia artificial",
+            "produtividade google workspace",
+            "organizar rotina com gemini"
         ]
     },
     {
-        "topic": "Como Usar o DeepSeek Grátis para Automatizar Planilhas e Fórmulas no Excel",
-        "category": "Automação & Produtividade",
+        "topic": "Do Google Keep ao Drive: Como Criar um Segundo Cérebro Automatizado com Gemini",
+        "category": "Segundo Cérebro & Produtividade",
         "keywords": [
-            "deepseek no excel",
-            "automacao de planilhas com ia",
-            "formulas excel inteligentes",
-            "deepseek v3 gratis",
-            "analise de dados para iniciantes"
+            "segundo cerebro no google drive",
+            "organizacao de notas com ia",
+            "gemini no google drive",
+            "automacao de notas google keep",
+            "gestao de informacao pessoal com ia"
         ]
     },
     {
-        "topic": "As 7 Melhores Ferramentas de Inteligência Artificial Gratuitas em 2026",
-        "category": "Ferramentas de IA",
+        "topic": "Google Planilhas e Docs Turbinados com Gemini: Fórmulas e Relatórios no Piloto Automático",
+        "category": "Planilhas & Dados Inteligentes",
         "keywords": [
-            "ferramentas de ia gratuitas",
-            "alternativas gratis ao chatgpt",
-            "melhores apps de inteligencia artificial",
-            "ia para produtividade",
-            "softwares de ia sem pagar"
+            "gemini no google sheets",
+            "formulas inteligentes no google planilhas",
+            "automacao de relatorios google docs",
+            "analise de dados com gemini",
+            "produtividade no google docs com ia"
         ]
     },
     {
-        "topic": "Guia Prático: Como Criar seu Primeiro Agente de IA Sem Saber Programar",
-        "category": "Agentes & Automação",
+        "topic": "Como Integrar Gemini, Tarefas e Calendário para Planejar sua Semana em Minutos",
+        "category": "Gestão de Tempo & Rotina",
         "keywords": [
-            "como criar agente de ia",
-            "ia autonoma para iniciantes",
-            "automacao sem codigo",
-            "agentes de produtividade",
-            "fluxos inteligentes no code"
+            "planejamento semanal com gemini",
+            "google calendar automacao ia",
+            "assistente pessoal google gemini",
+            "gerenciar tarefas e prazos com ia",
+            "rotina produtiva inteligente"
         ]
     },
     {
-        "topic": "Claude 3.5 Sonnet vs ChatGPT Plus: Qual a Melhor IA para Trabalhar em 2026?",
-        "category": "Comparativos de IA",
+        "topic": "Google Spark e Extensões do Gemini: O Guia Definitivo de Automações Nativas de IA",
+        "category": "Inovações & Ferramentas Google",
         "keywords": [
-            "claude 3.5 sonnet vs chatgpt",
-            "melhor ia para programacao e texto",
-            "comparativo inteligencias artificiais",
-            "chatgpt plus vale a pena",
-            "modelos de linguagem 2026"
+            "google spark automacao",
+            "extensoes do gemini workspace",
+            "como conectar ferramentas google com ia",
+            "automacao de fluxos com gemini",
+            "novidades google ia 2026"
         ]
     }
 ]
