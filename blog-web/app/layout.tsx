@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   keywords: ['Inteligência Artificial', 'Produtividade', 'Automação', 'ChatGPT', 'DeepSeek', 'Prompts', 'Tecnologia'],
   authors: [{ name: 'Equipe PromptPulse' }],
   metadataBase: new URL('https://www.promptpulse.com.br'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: 'PromptPulse | Inteligência Artificial & Produtividade',
     description: 'Tutoriais práticos, ferramentas de IA e estratégias para economizar tempo e alavancar sua carreira.',

@@ -35,7 +35,18 @@ def main():
         active_keywords_list = format_suggestions_for_generation(raw_suggestions, max_results=3)
     else:
         print("=== Usando a lista de palavras-chave estática do keywords.py ===")
-        active_keywords_list = KEYWORDS_LIST[:1] # Gera o primeiro artigo do cluster Gemini
+        # Filtrar tópicos que já foram publicados para pegar sempre o próximo inédito da fila
+        from publish_markdown import slugify
+        blog_posts_dir = os.path.join(os.path.dirname(__file__), "blog-web", "content", "posts")
+        existing_slugs = {os.path.splitext(f)[0] for f in os.listdir(blog_posts_dir) if f.endswith(".md")} if os.path.exists(blog_posts_dir) else set()
+        
+        unpublished = [item for item in KEYWORDS_LIST if slugify(item['topic']) not in existing_slugs]
+        if unpublished:
+            print(f"Encontrados {len(unpublished)} tópicos inéditos. Processando o próximo da fila...")
+            active_keywords_list = [unpublished[0]]
+        else:
+            print("Todos os tópicos do cluster já foram publicados! Usando o primeiro para regeneração.")
+            active_keywords_list = [KEYWORDS_LIST[0]]
 
     print(f"Total de tópicos a processar: {len(active_keywords_list)}")
     print("="*60)
@@ -46,10 +57,11 @@ def main():
         print(f"\n[Processando Tópico]: {topic}")
         print(f"[Keywords de Apoio]: {', '.join(keywords)}")
 
-        # Criar diretório único para guardar o backup local dos arquivos gerados
+        # Criar diretório único para guardar o backup local dos arquivos gerados (sanitizado para Windows)
         random_hash = uuid.uuid4().hex[:8]
-        topic_directory = os.path.join(
-            base_directory, f"{topic.replace(' ', '_').replace('/', '_')}_{random_hash}")
+        import re
+        clean_folder_name = re.sub(r'[\/:*?"<>|]', '_', topic).replace(' ', '_')
+        topic_directory = os.path.join(base_directory, f"{clean_folder_name}_{random_hash}")
         if not os.path.exists(topic_directory):
             os.makedirs(topic_directory)
 

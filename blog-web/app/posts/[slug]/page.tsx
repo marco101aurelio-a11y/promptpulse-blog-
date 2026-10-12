@@ -34,6 +34,9 @@ export async function generateMetadata({ params }: PostPageProps) {
   return {
     title: `${post.title} | PromptPulse`,
     description: post.excerpt,
+    alternates: {
+      canonical: `/posts/${slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
