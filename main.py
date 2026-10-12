@@ -75,9 +75,9 @@ def main():
         optimized_post = audit_blog_post(original_post)
         save_to_file(topic_directory, "optimized_post.txt", optimized_post)
 
-        # 4. Obter Imagem Temática Relacionada (Pexels / Unsplash Fallback)
-        print("Buscando imagem correspondente...")
-        image_url = get_pexels_image(topic)
+        # 4. Obter Imagem Temática Relacionada (Garantindo imagem 100% inédita)
+        print("Buscando imagem correspondente inédita...")
+        image_url = get_pexels_image(topic, keywords=keywords)
         save_to_file(topic_directory, "image_url.txt", image_url)
         
         # Faz download da imagem localmente para subir para o WordPress

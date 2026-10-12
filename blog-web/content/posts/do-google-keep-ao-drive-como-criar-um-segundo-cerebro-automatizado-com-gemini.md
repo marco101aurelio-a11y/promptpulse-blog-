@@ -2,7 +2,7 @@
 title: "Do Google Keep ao Drive: Como Criar um Segundo Cérebro Automatizado com Gemini"
 date: "2026-10-12"
 excerpt: "Do Google Keep ao Drive: Como Criar um Segundo Cérebro Automatizado com Gemini    Imagine ter todas as suas ideias, tarefas e informações organizadas de forma i..."
-coverImage: "https://images.pexels.com/photos/30869081/pexels-photo-30869081.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+coverImage: "https://images.pexels.com/photos/8547193/pexels-photo-8547193.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 category: "Segundo Cérebro & Produtividade"
 tags:
   - "segundo cerebro no google drive"

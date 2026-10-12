@@ -25,36 +25,36 @@ KEYWORDS_LIST = [
         ]
     },
     {
-        "topic": "Google Planilhas e Docs Turbinados com Gemini: Fórmulas e Relatórios no Piloto Automático",
-        "category": "Planilhas & Dados Inteligentes",
-        "keywords": [
-            "gemini no google sheets",
-            "formulas inteligentes no google planilhas",
-            "automacao de relatorios google docs",
-            "analise de dados com gemini",
-            "produtividade no google docs com ia"
-        ]
-    },
-    {
-        "topic": "Como Integrar Gemini, Tarefas e Calendário para Planejar sua Semana em Minutos",
-        "category": "Gestão de Tempo & Rotina",
-        "keywords": [
-            "planejamento semanal com gemini",
-            "google calendar automacao ia",
-            "assistente pessoal google gemini",
-            "gerenciar tarefas e prazos com ia",
-            "rotina produtiva inteligente"
-        ]
-    },
-    {
-        "topic": "Google Spark e Extensões do Gemini: O Guia Definitivo de Automações Nativas de IA",
-        "category": "Inovações & Ferramentas Google",
+        "topic": "Google Spark e Gemini: Como Criar Automações Nativas Conectando Keep, Tarefas e Calendário",
+        "category": "Automações Nativas & Spark",
         "keywords": [
             "google spark automacao",
-            "extensoes do gemini workspace",
-            "como conectar ferramentas google com ia",
-            "automacao de fluxos com gemini",
-            "novidades google ia 2026"
+            "gemini google tarefas keep",
+            "integrar google agenda e tarefas com spark",
+            "automacao nativa google workspace",
+            "fluxos inteligentes google 2026"
+        ]
+    },
+    {
+        "topic": "Do Keep ao Relatório Final: Como Integrar Tarefas, Drive, Docs e Spark no Piloto Automático",
+        "category": "Ecossistema Google Integrado",
+        "keywords": [
+            "google spark no drive e docs",
+            "automacao google docs com ia",
+            "fluxo integrado google keep tarefas",
+            "produtividade sem codigo google",
+            "rotina inteligente google"
+        ]
+    },
+    {
+        "topic": "O Ecossistema Definitivo de Produtividade: Unindo Calendário, Tarefas, Drive e Gemini com Google Spark",
+        "category": "Produtividade & Gestão de Tempo",
+        "keywords": [
+            "planejamento semanal integrado com spark",
+            "google calendar e tarefas com gemini",
+            "assistente pessoal google integrado",
+            "automacoes inteligentes workspace",
+            "produtividade com spark"
         ]
     }
 ]

@@ -5,9 +5,12 @@ Sempre que um novo artigo for solicitado ou gerado para o blog PromptPulse:
 1. **Padrão de Autoria e Identidade:**
    - Autor: **Marco Aurélio**
    - Avatar: `/marco-aurelio.jpg`
-   - Categoria bem definida no nicho de IA, Produtividade ou Ferramentas Google.
+   - **Linha Editorial Central:** Conectar profundamente o ecossistema Google (Google Keep, Google Tarefas, Google Drive, Google Calendário) através da nova ferramenta **Google Spark** e do **Gemini**, trazendo tutoriais de automação prática no-code.
 
-2. **Link Building Interno Obrigatório (Topic Cluster):**
+2. **Imagens 100% Inéditas (Anti-Repetição):**
+   - NUNCA repetir imagens já utilizadas em outros posts do blog. O motor em `fetch_pexels_image.py` checa o banco de capas existentes e garante exclusividade para cada artigo.
+
+3. **Link Building Interno Obrigatório (Topic Cluster):**
    - Rastrear os artigos já publicados usando `internal_linking.py`.
    - Garantir que a IA insira de 1 a 2 links contextuais naturais apontando para posts existentes (formato `[texto âncora](/posts/slug)`).
 
