@@ -56,5 +56,16 @@ KEYWORDS_LIST = [
             "automacoes inteligentes workspace",
             "produtividade com spark"
         ]
+    },
+    {
+        "topic": "Google Sheets com Gemini e Spark: Como Automatizar Relatórios, Fórmulas e Dashboards Sem Escrever Código",
+        "category": "Google Sheets & Automação de Dados",
+        "keywords": [
+            "gemini no google sheets",
+            "automacao de planilhas com spark",
+            "relatorios inteligentes google docs sheets",
+            "analise de dados sem codigo google",
+            "produtividade em planilhas 2026"
+        ]
     }
 ]
