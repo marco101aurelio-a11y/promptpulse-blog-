@@ -15,7 +15,7 @@ def audit_blog_post(blog_post):
     prompt = AUDIT_BLOG_POST_PROMPT.format(blog_post=blog_post)
     response = client.chat.completions.create(
         model=OPENROUTER_MODEL,
-        messages=[{"role": "system", "content": "You are an expert editor."},
+        messages=[{"role": "system", "content": "Você é um editor especialista em SEO e clareza. REGRA OBRIGATÓRIA: Mantenha rigorosamente o mesmo idioma do texto fornecido (Português do Brasil se o texto estiver em português). NUNCA traduza o texto para inglês ou outro idioma."},
                   {"role": "user", "content": prompt}],
         max_tokens=4096
     )

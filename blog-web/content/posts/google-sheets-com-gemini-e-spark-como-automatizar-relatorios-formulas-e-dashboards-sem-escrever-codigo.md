@@ -88,7 +88,7 @@ In the coming years, **no-code data analysis with Google** will become the norm.
 🔮 **Integration with Workspace** (Docs, Slides, Meet)  
 🔮 **Multi-platform automation** (LinkedIn, WhatsApp, Slack)  
 
-As we explored in **[The Ultimate Productivity Ecosystem](/posts/o-ecossistema-definitivo-de-produtividade-unindo-calendario-tarefas-drive-e-gemini-com-google-spark)**, Google is building a **productivity operating system** where:  
+As we explored in **[How to Use Google Gemini to Automate Tasks, Keep & Calendar](/posts/como-usar-o-google-gemini-para-automatizar-tarefas-google-keep-e-agenda-em-2026)**, Google is building a **productivity operating system** where:  
 - **Keep** → captures ideas  
 - **Sheets** → processes data  
 - **Gemini** → makes decisions  
