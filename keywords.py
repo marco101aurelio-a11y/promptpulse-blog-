@@ -25,21 +25,21 @@ KEYWORDS_LIST = [
         ]
     },
     {
-        "topic": "Google Spark e Gemini: Como Criar Automações Nativas Conectando Keep, Tarefas e Calendário",
-        "category": "Automações Nativas & Spark",
+        "topic": "Google Tarefas e Conversa com Gemini: Como Criar Automações Nativas Conectando Keep, Tarefas e Calendário",
+        "category": "Automações Nativas & Google Tarefas",
         "keywords": [
-            "google spark automacao",
+            "google tarefas automacao",
             "gemini google tarefas keep",
-            "integrar google agenda e tarefas com spark",
+            "integrar google agenda e tarefas",
             "automacao nativa google workspace",
             "fluxos inteligentes google 2026"
         ]
     },
     {
-        "topic": "Do Keep ao Relatório Final: Como Integrar Tarefas, Drive, Docs e Spark no Piloto Automático",
+        "topic": "Do Keep ao Relatório Final: Como Integrar Tarefas, Drive, Docs e Conversa no Piloto Automático",
         "category": "Ecossistema Google Integrado",
         "keywords": [
-            "google spark no drive e docs",
+            "google tarefas no drive e docs",
             "automacao google docs com ia",
             "fluxo integrado google keep tarefas",
             "produtividade sem codigo google",
@@ -47,22 +47,22 @@ KEYWORDS_LIST = [
         ]
     },
     {
-        "topic": "O Ecossistema Definitivo de Produtividade: Unindo Calendário, Tarefas, Drive e Gemini com Google Spark",
+        "topic": "O Ecossistema Definitivo de Produtividade: Unindo Calendário, Tarefas, Drive e Gemini com Conversa Inteligente",
         "category": "Produtividade & Gestão de Tempo",
         "keywords": [
-            "planejamento semanal integrado com spark",
+            "planejamento semanal integrado com tarefas",
             "google calendar e tarefas com gemini",
             "assistente pessoal google integrado",
             "automacoes inteligentes workspace",
-            "produtividade com spark"
+            "produtividade com google tarefas"
         ]
     },
     {
-        "topic": "Google Sheets com Gemini e Spark: Como Automatizar Relatórios, Fórmulas e Dashboards Sem Escrever Código",
+        "topic": "Google Sheets com Gemini e Tarefas: Como Automatizar Relatórios, Fórmulas e Dashboards Sem Escrever Código",
         "category": "Google Sheets & Automação de Dados",
         "keywords": [
             "gemini no google sheets",
-            "automacao de planilhas com spark",
+            "automacao de planilhas com tarefas",
             "relatorios inteligentes google docs sheets",
             "analise de dados sem codigo google",
             "produtividade em planilhas 2026"

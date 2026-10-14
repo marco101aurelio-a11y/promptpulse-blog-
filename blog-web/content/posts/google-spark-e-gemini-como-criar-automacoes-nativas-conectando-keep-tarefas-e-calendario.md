@@ -1,13 +1,13 @@
 ---
-title: "Google Spark e Gemini: Como Criar Automações Nativas Conectando Keep, Tarefas e Calendário"
+title: "Google Tarefas e Gemini: Como Criar Automações Nativas Conectando Keep, Tarefas e Calendário"
 date: "2026-10-13"
-excerpt: "Google Spark and Gemini: The Revolution of Native Automation in Workspace       Why This Will Change Your Workflow Today    Have you ever stopped to count how m..."
+excerpt: "Google Tasks and Gemini: The Revolution of Native Automation in Workspace       Why This Will Change Your Workflow Today    Have you ever stopped to count how m..."
 coverImage: "https://images.pexels.com/photos/18471543/pexels-photo-18471543.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-category: "Automações Nativas & Spark"
+category: "Automações Nativas & Google Tarefas"
 tags:
-  - "google spark automacao"
+  - "google tarefas automacao"
   - "gemini google tarefas keep"
-  - "integrar google agenda e tarefas com spark"
+  - "integrar google agenda e tarefas com gemini"
   - "automacao nativa google workspace"
   - "fluxos inteligentes google 2026"
 author:
@@ -18,11 +18,11 @@ readTime: "5 min de leitura"
 featured: false
 ---
 
-# Google Spark and Gemini: The Revolution of Native Automation in Workspace  
+# Google Tasks and Gemini: The Revolution of Native Automation in Workspace  
 
 ## Why This Will Change Your Workflow Today  
 
-Have you ever stopped to count how many times a day you switch between Google Keep, Tasks, Calendar, and Drive? The bad news: this can consume up to **27% of your productive time** (data from RescueTime). The good news: **Google Spark and Gemini** are here to connect all of this intelligently—and you don’t even need to know how to code.  
+Have you ever stopped to count how many times a day you switch between Google Keep, Tasks, Calendar, and Drive? The bad news: this can consume up to **27% of your productive time** (data from RescueTime). The good news: **Google Tasks and Gemini Conversa** are here to connect all of this intelligently—and you don’t even need to know how to code.  
 
 In this guide, you’ll discover:  
 - **How to turn a quick note in Keep** into a scheduled task + document in Drive automatically  
@@ -40,7 +40,7 @@ Until 2024, connecting Google apps required:
 🔴 Manual copying between apps (human errors guaranteed)  
 
 The game-changer arrived with:  
-✅ **Google Spark** (the native platform for visual automations)  
+✅ **Google Tasks** (native task checklist and action execution)  
 ✅ **Gemini** (AI that understands context and suggests workflows)  
 
 ### Current Trends: Workspace Has Become a Living Organism  
@@ -54,7 +54,7 @@ By 2026, data shows that:
 
 ### Workflow 1: From Brainstorm to Execution (Keep → Tasks → Calendar)  
 **Problem:** Ideas in Keep turn into "digital tumors"—noted and forgotten.  
-**Solution with Spark/Gemini:**  
+**Solution with Tasks/Gemini:**  
 1. Create a workflow triggered by `new note in Keep with #task`  
 2. Gemini analyzes the text and:  
    - Extracts deadlines ("need this by Friday" → schedules in Calendar)  
@@ -68,7 +68,7 @@ By 2026, data shows that:
 → Recording saved in Drive (if Meet is activated)  
 
 **How to do it:**  
-- Use the `#minutes` template in Spark with:  
+- Use the `#minutes` template in Google Tasks & Gemini with:  
   ```  
   When {Calendar event contains "meeting"}  
   → Create Doc in /Drive/_Minutes/{date}  
@@ -96,7 +96,7 @@ Get ready for:
 
 ## Now It’s Your Turn: First Steps  
 
-1. **Activate Google Spark** (available in Workspace Labs)  
+1. **Activate Google Tasks & Gemini Conversa** (available natively in Workspace)  
 2. **Start with one simple workflow:**  
    "Every note in Keep with ⏰ becomes a Calendar event"  
 3. **Explore ready-made templates** from Gemini (it suggests based on your usage)  
@@ -105,7 +105,7 @@ Want to dive deeper? See [how leaders use AI for radical productivity](/posts/ho
 
 **What’s your next step?**  
 [ ] Test the Keep → Tasks automation now  
-[ ] Block time in Calendar to explore Spark  
+[ ] Block time in Calendar to explore Google Tasks and Gemini  
 [ ] Read first [the comparison of the best AIs for automation](/posts/deepseek-v3-vs-chatgpt-comparison)  
 
 *(Let us know in the comments!)*

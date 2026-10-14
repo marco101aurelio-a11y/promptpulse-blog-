@@ -50,7 +50,7 @@ def get_search_terms_for_topic(query, keywords=None):
     q_lower = query.lower()
     
     # Categorizacao inteligente por intencao
-    if "spark" in q_lower:
+    if "tarefas" in q_lower or "tasks" in q_lower or "conversa" in q_lower or "automacao" in q_lower:
         terms.extend(["automation workflow technology", "digital robot software cloud", "smart software system"])
     elif "keep" in q_lower or "segundo cérebro" in q_lower or "segundo cerebro" in q_lower or "notas" in q_lower:
         terms.extend(["digital notes computer desk", "workspace sticky notes laptop", "mind mapping productivity"])
