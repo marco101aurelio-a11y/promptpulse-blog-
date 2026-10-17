@@ -2,7 +2,7 @@
 title: "Do Keep ao Relatório Final: Como Integrar Tarefas, Drive, Docs e Conversa no Piloto Automático"
 date: "2026-10-17"
 excerpt: "Imagine capturar uma ideia no Google Keep e, minutos depois, ter um relatório profissional no Google Docs - sem um único copiar e colar. Parece mágica? É produt..."
-coverImage: "https://images.pexels.com/photos/3582392/pexels-photo-3582392.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+coverImage: "https://images.pexels.com/photos/8728106/pexels-photo-8728106.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
 category: "Google Workspace & Gemini"
 tags:
   - "google tarefas no drive e docs"
