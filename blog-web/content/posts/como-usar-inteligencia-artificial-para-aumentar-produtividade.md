@@ -3,7 +3,7 @@ title: "Como Usar Inteligência Artificial para Aumentar a Produtividade no Trab
 date: "2026-10-08"
 excerpt: "Descubra ferramentas e estratégias práticas de Inteligência Artificial para automatizar tarefas repetitivas, economizar até 10 horas por semana e focar no que realmente importa."
 coverImage: "https://images.pexels.com/photos/8439093/pexels-photo-8439093.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-category: "Produtividade & IA"
+category: "Prompts & Produtividade"
 tags: ["Inteligência Artificial", "Produtividade", "Automação", "ChatGPT", "Carreira"]
 author:
   name: "Marco Aurélio"

@@ -4,7 +4,7 @@
 KEYWORDS_LIST = [
     {
         "topic": "Como Usar o Google Gemini para Automatizar Tarefas, Google Keep e Agenda em 2026",
-        "category": "Automação Google Workspace",
+        "category": "Google Workspace & Gemini",
         "keywords": [
             "gemini google keep automacao",
             "integrar gemini e google agenda",
@@ -15,7 +15,7 @@ KEYWORDS_LIST = [
     },
     {
         "topic": "Do Google Keep ao Drive: Como Criar um Segundo Cérebro Automatizado com Gemini",
-        "category": "Segundo Cérebro & Produtividade",
+        "category": "Google Workspace & Gemini",
         "keywords": [
             "segundo cerebro no google drive",
             "organizacao de notas com ia",
@@ -26,7 +26,7 @@ KEYWORDS_LIST = [
     },
     {
         "topic": "Google Tarefas e Conversa com Gemini: Como Criar Automações Nativas Conectando Keep, Tarefas e Calendário",
-        "category": "Automações Nativas & Google Tarefas",
+        "category": "Google Workspace & Gemini",
         "keywords": [
             "google tarefas automacao",
             "gemini google tarefas keep",
@@ -37,7 +37,7 @@ KEYWORDS_LIST = [
     },
     {
         "topic": "Do Keep ao Relatório Final: Como Integrar Tarefas, Drive, Docs e Conversa no Piloto Automático",
-        "category": "Ecossistema Google Integrado",
+        "category": "Google Workspace & Gemini",
         "keywords": [
             "google tarefas no drive e docs",
             "automacao google docs com ia",
@@ -48,7 +48,7 @@ KEYWORDS_LIST = [
     },
     {
         "topic": "O Ecossistema Definitivo de Produtividade: Unindo Calendário, Tarefas, Drive e Gemini com Conversa Inteligente",
-        "category": "Produtividade & Gestão de Tempo",
+        "category": "Google Workspace & Gemini",
         "keywords": [
             "planejamento semanal integrado com tarefas",
             "google calendar e tarefas com gemini",
@@ -59,7 +59,7 @@ KEYWORDS_LIST = [
     },
     {
         "topic": "Google Sheets com Gemini e Tarefas: Como Automatizar Relatórios, Fórmulas e Dashboards Sem Escrever Código",
-        "category": "Google Sheets & Automação de Dados",
+        "category": "Google Workspace & Gemini",
         "keywords": [
             "gemini no google sheets",
             "automacao de planilhas com tarefas",

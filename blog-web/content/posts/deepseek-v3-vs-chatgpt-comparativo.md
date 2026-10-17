@@ -3,7 +3,7 @@ title: "DeepSeek V3 vs ChatGPT: Qual a Melhor IA para Criar Conteúdo em 2026?"
 date: "2026-10-07"
 excerpt: "Comparamos velocidade, qualidade de texto, custo por milhão de tokens e capacidade de raciocínio entre DeepSeek V3 e os modelos da OpenAI."
 coverImage: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80"
-category: "Inteligência Artificial"
+category: "Comparativos & Ferramentas"
 tags: ["DeepSeek", "OpenAI", "ChatGPT", "Comparativo", "Modelos de IA"]
 author:
   name: "Marco Aurélio"

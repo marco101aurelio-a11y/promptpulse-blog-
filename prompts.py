@@ -2,62 +2,69 @@
 
 import random
 
-# Different templates for generating an SEO-optimized blog post
+# Templates otimizados para geração de artigos de blog em Português (pt-BR) com foco em SEO e legibilidade
 SEO_BLOG_POST_PROMPTS = [
     """
-    Write a comprehensive blog post on the topic "{topic}" optimized for SEO. The post should include the following keywords: {keywords}. 
-    Start with an engaging introduction that highlights the importance of the topic. 
-    Follow with detailed sections including:
+    Escreva um artigo completo, aprofundado e altamente prático sobre o tema "{topic}" em Português do Brasil (pt-BR), totalmente otimizado para SEO.
+    O artigo deve incorporar estrategicamente as seguintes palavras-chave: {keywords}.
 
-    1. Background and Context
-    2. Key Benefits and Features
-    3. Practical Tips and Strategies
-    4. Case Studies or Examples
-    5. Conclusion with a call to action.
-
-    Make sure to structure the content with headings, subheadings, and bullet points where appropriate.
+    Diretrizes essenciais:
+    - IDIOMA: Escreva 100% em Português do Brasil (pt-BR).
+    - TÍTULO: NÃO inclua o título H1 (# Título) no topo do texto, pois o sistema de publicação já o insere automaticamente. Comece diretamente pela introdução envolvente.
+    - ESTRUTURA:
+      1. Introdução cativante que destaque a importância real do tema para o dia a dia de trabalho.
+      2. Contexto e evolução da ferramenta ou técnica.
+      3. Principais benefícios práticos e ganhos de produtividade.
+      4. Guia passo a passo com exemplos práticos acionáveis (sem termos vagos).
+      5. Tendências futuras e visão de longo prazo.
+      6. Conclusão motivadora com chamada para ação clara.
+    - FORMATAÇÃO: Use subtítulos claros (## e ###), listas com marcadores, formatação em negrito para termos-chave e blocos de destaque (dicas práticas).
     """,
     """
-    Create an in-depth blog post about "{topic}" focusing on SEO optimization. Include relevant keywords such as {keywords}. 
-    Organize the content with the following sections:
+    Crie um artigo detalhado e direto ao ponto sobre "{topic}" em Português do Brasil (pt-BR), com foco em alta retenção e SEO.
+    Integre com naturalidade as palavras-chave: {keywords}.
 
-    1. Introduction: Provide an overview of the topic and its significance.
-    2. Detailed Analysis: Discuss the main points in detail with supporting data and research.
-    3. Implementation Strategies: Offer actionable advice and best practices.
-    4. Benefits and Challenges: Highlight the advantages and potential obstacles.
-    5. Conclusion: Summarize the key takeaways and encourage reader engagement.
-
-    Ensure clarity with headings, subheadings, and lists to enhance readability.
+    Diretrizes essenciais:
+    - IDIOMA: Escreva 100% em Português do Brasil (pt-BR).
+    - TÍTULO: NÃO insira a tag H1 (# Título) no início. Inicie diretamente com uma introdução marcante.
+    - ESTRUTURA:
+      1. Introdução: Apresente o problema que o leitor enfrenta e a solução proposta.
+      2. Análise Detalhada: Explique como a tecnologia funciona e por que é superior às alternativas manuais.
+      3. Estratégias Práticas de Implementação: Tutoriais acionáveis, dicas e melhores práticas.
+      4. Vantagens e Cuidados: Benefícios claros e como evitar erros comuns.
+      5. Conclusão: Resumo dos pontos principais e convite para reflexão/comentários.
+    - FORMATAÇÃO: Parágrafos curtos, subtítulos escaneáveis (## e ###) e listas com marcadores para máxima legibilidade.
     """,
     """
-    Generate a detailed and SEO-friendly blog post on the topic "{topic}". Use the keywords {keywords} strategically throughout the post. 
-    Structure the post with the following outline:
+    Gere um guia completo e especializado sobre "{topic}" em Português do Brasil (pt-BR), posicionado para ranquear nas primeiras posições do Google.
+    Distribua as seguintes palavras-chave de maneira fluida: {keywords}.
 
-    1. Introduction: Captivate the reader with the relevance of the topic.
-    2. Main Content: 
-        a. Historical Context or Background
-        b. Current Trends and Developments
-        c. Detailed Insights and Analysis
-    3. Practical Applications: Provide real-world examples and case studies.
-    4. Future Prospects: Discuss upcoming trends and predictions.
-    5. Conclusion: Recap the main points and suggest next steps or actions.
-
-    Improve clarity by using sections and bullet points where appropriate.
+    Diretrizes essenciais:
+    - IDIOMA: Escreva 100% em Português do Brasil (pt-BR).
+    - TÍTULO: Não adicione o título (#) no início do conteúdo. Comece pelo texto introdutório.
+    - ESTRUTURA:
+      1. Introdução: Gancho inicial destacando o ganho de tempo e produtividade.
+      2. Como Funciona na Prática: Detalhamento com cenários reais de uso no dia a dia profissional.
+      3. Casos de Uso e Tutoriais: Passo a passo claro para configurar e rodar automações sem código.
+      4. O Futuro da Ferramenta: O que esperar das próximas atualizações e evolução do ecossistema.
+      5. Conclusão e Próximos Passos: Síntese e direcionamento prático para o leitor.
+    - FORMATAÇÃO: Estilo moderno, dinâmico, com tópicos diretos e destaque para conceitos essenciais.
     """
 ]
 
-# Template for auditing and optimizing a blog post for readability
+# Template para revisão e auditoria de legibilidade
 AUDIT_BLOG_POST_PROMPT = """
-Audit and optimize the following blog post for readability and simple language. Ensure the content is easy to understand for a general audience:
+Revise e otimize o artigo a seguir para garantir máxima clareza, tom profissional e natural em Português do Brasil (pt-BR).
+Mantenha a formatação Markdown, melhore a fluidez e certifique-se de que a leitura seja simples e envolvente.
 
 {blog_post}
 ---
-only output the optimized blog post and nothing else
+Saída obrigatória: Retorne estritamente o texto revisado em Português do Brasil, sem comentários adicionais ou introduções.
 """
 
-# Template for generating image descriptions
+# Template para geração de descrições visuais de imagens
 IMAGE_PROMPT = """
-Generate a detailed description for an image that should accompany the blog post on "{topic}". The image should be visually appealing and relevant to the content.
+Gere uma descrição detalhada em inglês (prompt para busca/geração de imagem) para uma imagem conceitual e profissional que represente o artigo sobre "{topic}". A imagem deve ser moderna, corporativa e visualmente atraente.
 """
 
 def get_random_seo_blog_post_prompt():

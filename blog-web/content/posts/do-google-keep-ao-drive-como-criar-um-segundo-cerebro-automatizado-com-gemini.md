@@ -1,9 +1,9 @@
 ---
 title: "Do Google Keep ao Drive: Como Criar um Segundo Cérebro Automatizado com Gemini"
 date: "2026-10-12"
-excerpt: "Do Google Keep ao Drive: Como Criar um Segundo Cérebro Automatizado com Gemini    Imagine ter todas as suas ideias, tarefas e informações organizadas de forma i..."
+excerpt: "Aprenda a estruturar um segundo cérebro digital conectando Google Keep e Google Drive com inteligência artificial para organizar notas e projetos automaticamente."
 coverImage: "https://images.pexels.com/photos/8547193/pexels-photo-8547193.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-category: "Segundo Cérebro & Produtividade"
+category: "Google Workspace & Gemini"
 tags:
   - "segundo cerebro no google drive"
   - "organizacao de notas com ia"
@@ -17,8 +17,6 @@ author:
 readTime: "5 min de leitura"
 featured: false
 ---
-
-# Do Google Keep ao Drive: Como Criar um Segundo Cérebro Automatizado com Gemini  
 
 Imagine ter todas as suas ideias, tarefas e informações organizadas de forma inteligente, sem perder horas fazendo isso manualmente. Com ferramentas como **Google Keep**, **Google Drive** e a **Gemini** (uma inteligência artificial), você pode transformar a maneira como gerencia suas informações. Vamos mostrar como criar um **segundo cérebro automatizado** no Google Drive para turbinar sua produtividade!  
 

@@ -1,6 +1,16 @@
 import os
+import sys
 import uuid
 import json
+
+# Garantir compatibilidade UTF-8 no Windows
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+        sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
 from config import DEFAULT_LANGUAGE, WORDPRESS_URL
 from generate_blog_post import generate_blog_post
 from audit_blog_post import audit_blog_post

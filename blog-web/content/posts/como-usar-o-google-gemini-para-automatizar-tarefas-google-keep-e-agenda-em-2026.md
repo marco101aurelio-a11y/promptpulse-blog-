@@ -1,9 +1,9 @@
 ---
 title: "Como Usar o Google Gemini para Automatizar Tarefas, Google Keep e Agenda em 2026"
 date: "2026-10-13"
-excerpt: "Como Usar o Google Gemini para Automatizar Tarefas em 2026       Introdução   Em 2026, a inteligência artificial está transformando a forma como trabalhamos. O ..."
+excerpt: "Descubra como integrar o Google Gemini com Keep, Tarefas e Agenda para criar fluxos de trabalho inteligentes, eliminando tarefas repetitivas na sua rotina."
 coverImage: "https://images.pexels.com/photos/33266805/pexels-photo-33266805.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-category: "Automação Google Workspace"
+category: "Google Workspace & Gemini"
 tags:
   - "gemini google keep automacao"
   - "integrar gemini e google agenda"
@@ -17,8 +17,6 @@ author:
 readTime: "5 min de leitura"
 featured: false
 ---
-
-# Como Usar o Google Gemini para Automatizar Tarefas em 2026  
 
 ## Introdução  
 Em 2026, a inteligência artificial está transformando a forma como trabalhamos. O **Google Gemini** se tornou uma ferramenta poderosa para **automatizar tarefas repetitivas** e organizar sua rotina.  

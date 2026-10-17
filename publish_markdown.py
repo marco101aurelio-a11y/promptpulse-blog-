@@ -31,8 +31,12 @@ def save_to_nextjs_blog(title, content, image_url, category="Inteligência Artif
 
     today = datetime.today().strftime('%Y-%m-%d')
     
-    # Extrair um resumo curto dos primeiros 150 caracteres do texto
-    clean_text = re.sub(r'[#*`\n]', ' ', content).strip()
+    # Remover eventual título repetido no início do conteúdo (# Título) para evitar duplicidade de H1 e excerpt
+    content_clean = re.sub(r'^\s*#\s+[^\n]+\n+', '', content.strip())
+    
+    # Extrair um resumo limpo dos primeiros 160 caracteres (sem tags, sem markdown)
+    clean_text = re.sub(r'[#*`_\n]', ' ', content_clean)
+    clean_text = re.sub(r'\s+', ' ', clean_text).strip()
     excerpt = clean_text[:160] + "..." if len(clean_text) > 160 else clean_text
 
     # Formatar tags para YAML
@@ -55,7 +59,7 @@ featured: false
 ---
 
 """
-    full_post_content = frontmatter + content.strip() + "\n"
+    full_post_content = frontmatter + content_clean.strip() + "\n"
 
     with open(file_path, 'w', encoding='utf-8') as f:
         f.write(full_post_content)

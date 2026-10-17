@@ -36,7 +36,8 @@ export default function FeaturedHero({ post }: FeaturedHeroProps) {
             <div className="flex items-center gap-2">
               <img
                 src={post.author.avatar}
-                alt={post.author.name}
+                alt=""
+                aria-hidden="true"
                 className="w-8 h-8 rounded-full object-cover border border-neutral-700"
               />
               <span className="text-neutral-300 font-medium">{post.author.name}</span>

@@ -5,13 +5,13 @@ import json
 import string
 import time
 
-def get_google_suggestions(query, language="en"):
+def get_google_suggestions(query, language="pt-BR"):
     """
     Busca sugestões do Google Autocomplete para uma determinada query e idioma.
     Retorna uma lista de strings recomendadas.
     """
     encoded_query = urllib.parse.quote(query)
-    # hl define o idioma (ex: en, pt-BR, es)
+    # hl define o idioma (ex: pt-BR, en, es)
     url = f"https://suggestqueries.google.com/complete/search?client=chrome&q={encoded_query}&hl={language}"
     
     headers = {
@@ -29,7 +29,7 @@ def get_google_suggestions(query, language="en"):
         print(f"Erro ao buscar autocomplete para '{query}': {e}")
     return []
 
-def extract_long_tail_keywords(seed_keyword, language="en", depth_a_to_z=False):
+def extract_long_tail_keywords(seed_keyword, language="pt-BR", depth_a_to_z=False):
     """
     Extrai termos de cauda longa a partir de uma palavra-chave semente.
     Se depth_a_to_z for True, busca a palavra semente + cada letra do alfabeto (a-z).
@@ -73,7 +73,7 @@ def format_suggestions_for_generation(suggestions, max_results=10):
         
         # Se não houver palavras secundárias suficientes, coloca termos gerais
         if not keywords:
-            keywords = [sug, "tutorial", "guide", "tips"]
+            keywords = [sug, "tutorial", "passo a passo", "dicas de produtividade"]
             
         formatted_list.append({
             "topic": sug.title(),

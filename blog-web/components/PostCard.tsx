@@ -59,7 +59,8 @@ export default function PostCard({ post, priority = false }: PostCardProps) {
           <div className="flex items-center gap-2.5">
             <img
               src={post.author.avatar}
-              alt={post.author.name}
+              alt=""
+              aria-hidden="true"
               className="w-7 h-7 rounded-full object-cover border border-neutral-700"
             />
             <span className="text-xs font-medium text-neutral-300">

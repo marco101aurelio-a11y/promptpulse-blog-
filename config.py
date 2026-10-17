@@ -22,3 +22,13 @@ WORDPRESS_APP_PASSWORD = os.getenv("WORDPRESS_APP_PASSWORD", "")
 # Idiomas padrão
 DEFAULT_LANGUAGE = os.getenv("DEFAULT_LANGUAGE", "pt")
 SUPPORTED_LANGUAGES = ["en", "pt", "es"]
+
+# Configurações do Google Analytics 4 (Data API)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+GA_CREDENTIALS_FILE = os.getenv("GOOGLE_APPLICATION_CREDENTIALS", "projeto-blog-automatico-494221-a5d1909a3d90.json")
+if not os.path.isabs(GA_CREDENTIALS_FILE):
+    GA_CREDENTIALS_PATH = os.path.join(BASE_DIR, GA_CREDENTIALS_FILE)
+else:
+    GA_CREDENTIALS_PATH = GA_CREDENTIALS_FILE
+
+GA_PROPERTY_ID = os.getenv("GA_PROPERTY_ID", "")

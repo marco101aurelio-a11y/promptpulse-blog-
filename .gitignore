@@ -7,3 +7,7 @@ blog_topics.json
 node_modules/
 .tmp.*
 temp_images/
+# Google Cloud Service Account Keys
+projeto-blog-automatico-*.json
+*-credentials.json
+service-account*.json

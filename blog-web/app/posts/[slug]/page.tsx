@@ -136,7 +136,8 @@ export default async function PostPage({ params }: PostPageProps) {
             <div className="flex items-center gap-3">
               <img
                 src={post.author.avatar}
-                alt={post.author.name}
+                alt=""
+                aria-hidden="true"
                 className="w-10 h-10 rounded-full object-cover border border-neutral-700"
               />
               <div>
