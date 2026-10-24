@@ -85,14 +85,42 @@ def main():
         optimized_post = audit_blog_post(original_post)
         save_to_file(topic_directory, "optimized_post.txt", optimized_post)
 
-        # 4. Obter Imagem Temática Relacionada (Garantindo imagem 100% inédita)
-        print("Buscando imagem correspondente inédita...")
-        image_url = get_pexels_image(topic, keywords=keywords)
+        # 4. Obter Imagem de Capa (DALL-E 3 com IA ou Pexels)
+        print("Obtendo imagem de capa para o artigo...")
+        from config import IMAGE_PROVIDER, OPENAI_API_KEY
+        from generate_image import generate_image_description, generate_dalle_image, save_ai_image_locally
+
+        image_url = None
+        if IMAGE_PROVIDER == "dalle" and OPENAI_API_KEY:
+            try:
+                print("Gerando descrição visual contextualizada em inglês para o DALL-E 3...")
+                dalle_prompt = generate_image_description(topic, keywords=keywords)
+                print(f"Prompt DALL-E: {dalle_prompt[:120]}...")
+                print("Solicitando imagem ao DALL-E 3 na OpenAI...")
+                cover_filename = f"{random_hash}.png"
+                image_url = generate_dalle_image(dalle_prompt, dest_filename=cover_filename)
+                print(f"[OK] Capa gerada com sucesso via OpenAI (gpt-image-2): {image_url}")
+            except Exception as e:
+                print(f"[AVISO] Falha ao gerar via OpenAI ({e}). Recorrendo ao Pexels...")
+
+        if not image_url:
+            print("Buscando imagem correspondente inédita no Pexels...")
+            image_url = get_pexels_image(topic, keywords=keywords)
+
         save_to_file(topic_directory, "image_url.txt", image_url)
         
-        # Faz download da imagem localmente para subir para o WordPress
-        local_img_path = os.path.join(temp_img_directory, f"{random_hash}.jpg")
-        image_downloaded = download_image(image_url, local_img_path)
+        # Download para WordPress (se configurado e for URL externa)
+        local_img_path = os.path.join(temp_img_directory, f"{random_hash}.png")
+        image_downloaded = False
+        if image_url.startswith("http://") or image_url.startswith("https://"):
+            image_downloaded = download_image(image_url, local_img_path)
+        else:
+            # Já é uma imagem salva localmente na pasta /covers
+            blog_cover_path = os.path.join(os.path.dirname(__file__), "blog-web", "public", image_url.lstrip("/"))
+            if os.path.exists(blog_cover_path):
+                import shutil
+                shutil.copyfile(blog_cover_path, local_img_path)
+                image_downloaded = True
 
         # 5. Publicação no Blog Next.js (Vercel)
         category = item.get("category", "Inteligência Artificial")

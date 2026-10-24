@@ -8,8 +8,13 @@ except ImportError:
 
 # Chaves de API para geração de texto e imagens (carregadas a partir do .env)
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
-# DeepSeek V3 via OpenRouter (Modelo recomendado por custo-benefício)
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
+
+# Modelo de texto
 OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "deepseek/deepseek-chat")
+
+# Provedor de imagem ('dalle' ou 'pexels')
+IMAGE_PROVIDER = os.getenv("IMAGE_PROVIDER", "dalle")
 
 # Chave da API do Pexels para imagens gratuitas de alta qualidade
 PEXELS_API_KEY = os.getenv("PEXELS_API_KEY", "")
