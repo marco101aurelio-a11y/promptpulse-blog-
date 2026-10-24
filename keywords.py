@@ -67,5 +67,16 @@ KEYWORDS_LIST = [
             "analise de dados sem codigo google",
             "produtividade em planilhas 2026"
         ]
+    },
+    {
+        "topic": "Como Empresários em Campo Grande Podem Automatizar a Gestão da Rotina com Gemini e Google Workspace",
+        "category": "IA para Empresas & Negócios",
+        "keywords": [
+            "automacao empresarial campo grande ms",
+            "gemini para empresas campo grande",
+            "produtividade para empresarios mato grosso do sul",
+            "consultoria inteligencia artificial campo grande",
+            "gestao de rotina google workspace pme"
+        ]
     }
 ]
