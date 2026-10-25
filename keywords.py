@@ -78,5 +78,27 @@ KEYWORDS_LIST = [
             "consultoria inteligencia artificial campo grande",
             "gestao de rotina google workspace pme"
         ]
+    },
+    {
+        "topic": "Inteligência Artificial e Automação de Processos para Empresas em Campo Grande MS: Por Onde Começar em 2026",
+        "category": "IA para Empresas & Negócios",
+        "keywords": [
+            "inteligencia artificial para empresas campo grande",
+            "automacao de processos campo grande ms",
+            "consultoria em ia campo grande",
+            "tecnologia para pme mato grosso do sul",
+            "reduzir custos com inteligencia artificial campo grande"
+        ]
+    },
+    {
+        "topic": "Como Reduzir 15 Horas Semanais de Trabalho Operacional na Sua Empresa em Campo Grande Usando IA",
+        "category": "IA para Empresas & Negócios",
+        "keywords": [
+            "produtividade empresarial campo grande ms",
+            "automatizar tarefas repetitivas empresas",
+            "consultoria de produtividade campo grande",
+            "ia para gestores e empresarios ms",
+            "otimizar processos de negocios mato grosso do sul"
+        ]
     }
 ]
