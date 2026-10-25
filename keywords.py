@@ -100,5 +100,16 @@ KEYWORDS_LIST = [
             "ia para gestores e empresarios ms",
             "otimizar processos de negocios mato grosso do sul"
         ]
+    },
+    {
+        "topic": "Google Workspace e MCP: Como a Conexão de Apps com IA Está Revolucionando Empresas no Brasil e em Campo Grande MS",
+        "category": "IA para Empresas & Negócios",
+        "keywords": [
+            "model context protocol empresas",
+            "integrar google workspace com mcp",
+            "ia conectando aplicativos corporativos",
+            "automacao avancada campo grande ms",
+            "futuro da inteligencia artificial mato grosso do sul"
+        ]
     }
 ]
