@@ -11,3 +11,4 @@ temp_images/
 projeto-blog-automatico-*.json
 *-credentials.json
 service-account*.json
+sites/
