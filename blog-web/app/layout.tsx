@@ -32,6 +32,9 @@ export const metadata: Metadata = {
     siteName: 'PromptPulse',
     url: 'https://www.promptpulse.com.br',
   },
+  other: {
+    'google-adsense-account': 'ca-pub-7250158547119594',
+  },
 };
 
 export default function RootLayout({
@@ -41,6 +44,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className={`${geistSans.variable} ${geistMono.variable} dark antialiased scroll-smooth`}>
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7250158547119594"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className="min-h-screen flex flex-col bg-neutral-950 text-neutral-100 selection:bg-cyan-500/30 selection:text-cyan-200">
         {/* Google Analytics (gtag.js) */}
         <Script
