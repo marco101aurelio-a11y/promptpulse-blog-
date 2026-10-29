@@ -111,5 +111,49 @@ KEYWORDS_LIST = [
             "automacao avancada campo grande ms",
             "futuro da inteligencia artificial mato grosso do sul"
         ]
+    },
+    {
+        "topic": "Do Google Planilhas ao ERP: Como Conectar Dados Financeiros e Relatórios com IA e MCP Sem Programar",
+        "category": "IA para Empresas & Negócios",
+        "keywords": [
+            "integrar google planilhas com erp ia",
+            "automacao financeira com mcp e gemini",
+            "relatorios financeiros automaticos ia",
+            "conectar banco de dados e planilhas sem codigo",
+            "gestao financeira inteligente empresas campo grande ms"
+        ]
+    },
+    {
+        "topic": "Agentes de IA com MCP e WhatsApp: Como Automatizar o Atendimento e Vendas da Sua Empresa em 2026",
+        "category": "IA para Empresas & Negócios",
+        "keywords": [
+            "agentes de ia whatsapp empresas",
+            "integrar whatsapp crm google agenda mcp",
+            "automacao de vendas com inteligencia artificial",
+            "atendimento inteligente campo grande ms",
+            "model context protocol whatsapp"
+        ]
+    },
+    {
+        "topic": "IA no Agronegócio e Empresas de Campo Grande MS: Como Integrar Gestão, Clima, Financeiro e Operações com Gemini e MCP",
+        "category": "IA para Empresas & Negócios",
+        "keywords": [
+            "inteligencia artificial agronegocio campo grande ms",
+            "automacao de gestao rural e empresarial ms",
+            "gemini e mcp no agronegocio mato grosso do sul",
+            "integrar dados operacionais e financeiros ia",
+            "tecnologia para empresas campo grande"
+        ]
+    },
+    {
+        "topic": "Como Criar Seu Próprio Assistente Executivo no Google Workspace + MCP para Gerenciar E-mails, Reuniões e Contratos",
+        "category": "Google Workspace & Gemini",
+        "keywords": [
+            "assistente executivo inteligencia artificial",
+            "automatizar gmail agenda e google docs gemini",
+            "gestao de contratos e reunioes com ia",
+            "google workspace com mcp na pratica",
+            "produtividade executiva com ia 2026"
+        ]
     }
 ]
