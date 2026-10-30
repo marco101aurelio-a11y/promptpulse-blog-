@@ -124,6 +124,17 @@ KEYWORDS_LIST = [
         ]
     },
     {
+        "topic": "Claude AI e Automações em Campo Grande MS: Como Conectar a IA da Anthropic ao Seu Negócio com MCP e Agentes Autônomos",
+        "category": "IA para Empresas & Negócios",
+        "keywords": [
+            "claude ai automacoes empresas",
+            "automacao com inteligencia artificial campo grande ms",
+            "claude mcp model context protocol",
+            "agentes de ia para empresas mato grosso do sul",
+            "integrar claude whatsapp crm erp"
+        ]
+    },
+    {
         "topic": "Agentes de IA com MCP e WhatsApp: Como Automatizar o Atendimento e Vendas da Sua Empresa em 2026",
         "category": "IA para Empresas & Negócios",
         "keywords": [
