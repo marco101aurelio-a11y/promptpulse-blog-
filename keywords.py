@@ -135,6 +135,17 @@ KEYWORDS_LIST = [
         ]
     },
     {
+        "topic": "Google Ads, Meta Ads e MCP: Como a IA Dá Autonomia Total no Tráfego Pago para Pequenos e Médios Empresários em Campo Grande MS",
+        "category": "IA para Empresas & Negócios",
+        "keywords": [
+            "google ads e meta ads com ia",
+            "mcp trafego pago automacao",
+            "anuncios online empresas campo grande ms",
+            "autonomia em marketing digital pme",
+            "otimizacao de campanhas com inteligencia artificial"
+        ]
+    },
+    {
         "topic": "Agentes de IA com MCP e WhatsApp: Como Automatizar o Atendimento e Vendas da Sua Empresa em 2026",
         "category": "IA para Empresas & Negócios",
         "keywords": [
