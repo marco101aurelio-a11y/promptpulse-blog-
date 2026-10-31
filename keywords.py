@@ -157,6 +157,17 @@ KEYWORDS_LIST = [
         ]
     },
     {
+        "topic": "MCP e Produtividade: Como Conectar Gemini, Google Keep e Tarefas a Qualquer App",
+        "category": "Google Workspace & Gemini",
+        "keywords": [
+            "mcp e produtividade",
+            "gemini google keep e tarefas",
+            "integrar google tarefas com mcp",
+            "automacao pessoal e empresarial ia",
+            "produtividade google workspace 2026"
+        ]
+    },
+    {
         "topic": "Agentes de IA com MCP e WhatsApp: Como Automatizar o Atendimento e Vendas da Sua Empresa em 2026",
         "category": "IA para Empresas & Negócios",
         "keywords": [
