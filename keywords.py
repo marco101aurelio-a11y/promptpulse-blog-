@@ -146,6 +146,17 @@ KEYWORDS_LIST = [
         ]
     },
     {
+        "topic": "Falta de Mão de Obra e Rota Bioceânica em Campo Grande MS: Como Escalar Sua Empresa com IA e MCP",
+        "category": "IA para Empresas & Negócios",
+        "keywords": [
+            "falta de mao de obra campo grande ms automacao",
+            "rota bioceanica oportunidades empresas campo grande",
+            "automacao atendimento comercio e servicos ms",
+            "agentes de ia bilingue logistica e negocios",
+            "escalar pequena empresa com mcp e inteligencia artificial"
+        ]
+    },
+    {
         "topic": "Agentes de IA com MCP e WhatsApp: Como Automatizar o Atendimento e Vendas da Sua Empresa em 2026",
         "category": "IA para Empresas & Negócios",
         "keywords": [
