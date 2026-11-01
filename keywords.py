@@ -168,6 +168,17 @@ KEYWORDS_LIST = [
         ]
     },
     {
+        "topic": "Automações com Datas Predefinidas: Como Fazer a IA Reconhecer Ciclos Semanais, Mensais e Suas Metas",
+        "category": "Google Workspace & Gemini",
+        "keywords": [
+            "automacao de metas com ia",
+            "ciclo semanal e mensal automatizado",
+            "agendamento de rotinas ia google workspace",
+            "acompanhamento de metas google planilhas mcp",
+            "produtividade orientada por metas 2026"
+        ]
+    },
+    {
         "topic": "Agentes de IA com MCP e WhatsApp: Como Automatizar o Atendimento e Vendas da Sua Empresa em 2026",
         "category": "IA para Empresas & Negócios",
         "keywords": [
