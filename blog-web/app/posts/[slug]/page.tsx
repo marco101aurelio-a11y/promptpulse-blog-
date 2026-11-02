@@ -176,7 +176,31 @@ export default async function PostPage({ params }: PostPageProps) {
 
         {/* Corpo do Artigo Renderizado em Markdown com Tipografia Rica */}
         <div className="prose-content max-w-none text-neutral-300 leading-relaxed text-base sm:text-lg">
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            components={{
+              table: ({ children }) => (
+                <div className="my-8 overflow-x-auto rounded-2xl border border-neutral-800 bg-neutral-900/40 shadow-xl">
+                  <table>{children}</table>
+                </div>
+              ),
+              img: ({ src, alt }) => (
+                <span className="block my-10">
+                  <img
+                    src={src}
+                    alt={alt || ''}
+                    loading="lazy"
+                    className="w-full h-auto rounded-2xl border border-neutral-800 shadow-2xl object-cover"
+                  />
+                  {alt && (
+                    <span className="block mt-3 text-center text-xs sm:text-sm text-neutral-400 italic px-2">
+                      {alt}
+                    </span>
+                  )}
+                </span>
+              ),
+            }}
+          >
             {post.content}
           </ReactMarkdown>
         </div>

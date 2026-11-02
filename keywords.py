@@ -179,6 +179,17 @@ KEYWORDS_LIST = [
         ]
     },
     {
+        "topic": "Bloqueio de IA no WhatsApp e Agentes Autônomos: O Que É Mito, Verdade e Como Ajustar Sua Empresa",
+        "category": "IA para Empresas & Negócios",
+        "keywords": [
+            "bloqueio ia whatsapp empresas verdade ou mito",
+            "regras meta whatsapp business api agentes ia",
+            "shadow ai seguranca de dados empresas lgpd",
+            "governanca agentes autonomos mcp human in the loop",
+            "como usar ia no whatsapp da empresa sem bloqueio"
+        ]
+    },
+    {
         "topic": "Agentes de IA com MCP e WhatsApp: Como Automatizar o Atendimento e Vendas da Sua Empresa em 2026",
         "category": "IA para Empresas & Negócios",
         "keywords": [
