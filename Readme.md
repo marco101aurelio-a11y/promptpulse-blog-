@@ -1,72 +1,54 @@
-# Blog Post Generator with GPT-4o and DALL-E 3
+# 📝 PromptPulse Blog — Fábrica Automatizada de Conteúdo & SEO
 
-This project utilizes OpenAI's GPT-4o model to generate and audit blog posts and DALL-E 3 to generate images for the blog posts. The program automates the creation of SEO-optimized content and relevant images, ensuring high-quality, engaging blog posts.
+Plataforma e pipeline de **Content Martech & SEO Programático** que automatiza a pesquisa de palavras-chave, geração de artigos otimizados com IA, auditoria semântica, criação de mídia visual, *internal linking* e publicação automática (Web Next.js / Markdown e WordPress), integrada ao **Antigravity Central Hub (MCP)**.
 
-## Features
+---
 
-- **Blog Post Generation:** Creates detailed blog posts optimized for SEO.
-- **Content Auditing:** Optimizes the generated content for readability and simplicity.
-- **Image Generation:** Produces relevant images to accompany each blog post.
-- **File System Storage:** Saves the original and optimized blog posts, image descriptions, and image URLs to the file system.
+## 🚀 Funcionalidades Principais
 
-## Prerequisites
+- **Motor de Palavras-Chave (`keyword_engine.py` & `keywords.py`):** Descoberta e estruturação de tópicos orientados a intenção de busca e tráfego orgânico.
+- **Geração & Auditoria SEO (`generate_blog_post.py` & `audit_blog_post.py`):** Redação automatizada de artigos profundos com revisão de legibilidade, escaneabilidade, meta-tags e estrutura de headings (`H1`–`H3`).
+- **Internal Linking Inteligente (`internal_linking.py`):** Conexão semântica automática entre artigos do cluster para fortalecimento de autoridade de domínio.
+- **Mídia Visual Automatizada (`generate_image.py` & `fetch_pexels_image.py`):** Geração de capas com IA e curadoria de imagens de alta resolução via API Pexels.
+- **Publicação Multi-Canal (`publish_markdown.py` & `publish_wordpress.py`):** Exportação direta para o portal web (`blog-web/`) e integração via REST API com WordPress.
+- **Telemetria & Analytics (`google_analytics.py`):** Acompanhamento de métricas de tráfego e performance de conteúdo.
 
-- Python 3.6+
-- OpenAI API key
+---
 
-## Installation
-
-### Clone the Repository
-
-```
-git clone https://github.com/yourusername/blog-post-generator.git
-cd blog-post-generator
-```
-
-## Updating the Keywords List
-
-To generate blog posts, the `keywords.py` file must be populated with topics and their associated keywords. This list is crucial as it directs the content generation process for each blog post.
-
-### Structure of `KEYWORDS_LIST`
-The `KEYWORDS_LIST` is an array of dictionaries, where each dictionary represents a blog topic and its related keywords. Here's the structure:
+## 📂 Estrutura do Projeto
 
 ```
-KEYWORDS_LIST = [
-{"topic": "Topic Name", "keywords": ["keyword1", "keyword2", "keyword3"]},
-]
+blog automatico v2/
+├── blog-web/                # Aplicação Web do Blog (Artigos em Markdown e Frontend)
+├── blog_posts/              # Repositório local de artigos gerados e auditados
+├── main.py                  # Orquestrador principal do pipeline de conteúdo
+├── generate_blog_post.py    # Geração de artigos otimizados para SEO
+├── audit_blog_post.py       # Auditoria e refinamento editorial via IA
+├── internal_linking.py      # Motor de linkagem interna automática
+├── keyword_engine.py        # Inteligência e expansão de palavras-chave
+├── publish_markdown.py      # Publicação no portal web em Markdown
+└── publish_wordpress.py     # Integração automática com WordPress
 ```
 
-To add a new blog post topic along with its keywords, append a new dictionary to the `KEYWORDS_LIST` with the topic and an array of keywords.
+---
 
-Note that with every program run all blogs in the keywords list will be generated so remove the ones you do not want to generate.
+## ⚙️ Como Executar
 
+1. **Instale as dependências no ambiente virtual:**
+   ```bash
+   python -m venv .venv
+   .venv\Scripts\activate
+   pip install openai requests python-dotenv
+   ```
 
-### Guidelines for Keywords
-- **Relevance:** Ensure that the keywords are highly relevant to the topic to maintain the focus and quality of the generated content.
-- **Variety:** Use a mix of broad and specific keywords to cover the topic comprehensively.
-- **Limitation:** While it's important to include multiple keywords, avoid overstuffing to keep the content natural and engaging.
+2. **Configure o arquivo `.env`** (baseado em `.env.example`):
+   ```env
+   OPENAI_API_KEY=sua_chave_aqui
+   PEXELS_API_KEY=sua_chave_pexels_aqui
+   ```
 
-By carefully selecting topics and corresponding keywords, you can tailor the content generation to meet specific themes and focus areas, enhancing the relevance and quality of your blog posts.
-
-
-### Install Required Libraries
-
-```
-pip install openai requests
-```
-
-### Set Up Your OpenAI API Key
-Replace 'your-openai-api-key' in the `config.py` file with your actual OpenAI API key.
-
-### Run the Main Script
-Navigate to your project directory in the terminal and execute:
-```
-python main.py
-```
-
-This will generate blog posts, audit them, create image descriptions, generate images, and save all these contents into their respective directories on the file system.
-
-
-## Cost Estimation
-- **DALL-E 3:** Approximately $0.08 per image.
-- **GPT-4o:** Approximately $0.01 per blog post.
+3. **Dispare a geração de conteúdo:**
+   ```bash
+   python main.py
+   ```
+   *(Ou acione remotamente via ferramenta `blog_disparar_geracao` pelo servidor MCP).*
