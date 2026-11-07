@@ -201,6 +201,17 @@ KEYWORDS_LIST = [
         ]
     },
     {
+        "topic": "Os 7 Maiores Erros de Pequenos e Médios Empresários com IA, MCP e Programação Fácil em 2026",
+        "category": "IA para Empresas & Negócios",
+        "keywords": [
+            "erros ao usar ia nas empresas",
+            "riscos vibe coding e automacao empresarial",
+            "seguranca mcp model context protocol pme",
+            "cuidados inteligencia artificial pequenos e medios empresarios",
+            "governanca de automacao e sistemas ia"
+        ]
+    },
+    {
         "topic": "IA no Agronegócio e Empresas de Campo Grande MS: Como Integrar Gestão, Clima, Financeiro e Operações com Gemini e MCP",
         "category": "IA para Empresas & Negócios",
         "keywords": [
