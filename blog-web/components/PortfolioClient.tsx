@@ -626,39 +626,40 @@ export default function PortfolioClient() {
     retentionRatePct,
   ]);
 
-  // --- Estado AI Studio, MCP Traffic Channels, Vídeo Pitch & Carreira ---
+  // --- Estado AI Studio, MCP Traffic Channels & Carreira ---
   const [selectedSystem, setSelectedSystem] = useState<number>(0);
   const [selectedMcpChannel, setSelectedMcpChannel] = useState<number>(0);
   const [logProgress, setLogProgress] = useState<number>(4);
   const [selectedCareerIdx, setSelectedCareerIdx] = useState<number>(5);
-  const [videoReady, setVideoReady] = useState<boolean>(true);
-  const [activeMediaTab, setActiveMediaTab] = useState<'video' | 'fotos'>('video');
   const [selectedPhotoIdx, setSelectedPhotoIdx] = useState<number>(0);
 
   const BASTIDORES_PHOTOS = [
     {
       src: '/portifolio/midia/foto-1.jpg',
       fallback: '/marco-aurelio.jpg',
-      tag: 'Operação & Estratégia • Campo Grande / MS',
-      title: 'Da trincheira comercial à engenharia de tráfego e dados',
+      tag: 'Marco Aurélio • Campo Grande / MS',
+      title: 'Da operação comercial à engenharia de tráfego e dados',
       caption:
-        'Mais de uma década conectando o que acontece no balcão de vendas e no WhatsApp das clínicas com o algoritmo do Google Ads e da Meta.',
+        'Mais de 10 anos conectando o que acontece no balcão de vendas e no WhatsApp das clínicas com o algoritmo do Google Ads, Meta e TikTok.',
+      targetView: 'cockpit' as ViewMode,
     },
     {
       src: '/portifolio/midia/foto-2.jpg',
       fallback: '/covers/ads_mcp_cg_2026.jpg',
-      tag: 'Bastidores • We Marketing Médico & V4',
-      title: 'Auditoria diária de 38 clínicas médicas (+R$ 85k/mês) e DRE',
+      tag: 'We Marketing Médico & Servidor MCP',
+      title: 'Atribuição GCLID e 23 Tools MCP nos canais de tráfego',
       caption:
-        'Foi a dor de auditar dezenas de contas toda manhã que me levou a programar meu próprio Servidor MCP integrado à planilha de DRE.',
+        'Arquitetura criada para gerenciar 38 clínicas médicas (+R$ 85k/mês) e integrar Meta, Google e TikTok APIs direto ao motor de DRE em JAX.',
+      targetView: 'aistudio' as ViewMode,
     },
     {
       src: '/portifolio/midia/foto-3.jpg',
       fallback: '/covers/human_in_the_loop_governanca_ia_2026.jpg',
-      tag: 'Trajetória • UNR Argentina, Americanas & Mixs',
-      title: 'Repertório humano antes da automação',
+      tag: 'Mixs, V4 Company & Americanas.com',
+      title: 'Governança financeira real: R$ 879,3k no PDV e trava de Stop-Loss',
       caption:
-        'Vivência na Universidad Nacional de Rosario (Espanhol C2), operação O2O na Americanas.com e R$ 879,3k gerados no PDV da Mixs.',
+        'Metodologia Drawflow e planilha de DRE com cálculo de Margem de Contribuição, Rateio Fixo Digital e Ponto de Equilíbrio.',
+      targetView: 'dre' as ViewMode,
     },
   ];
 
@@ -782,7 +783,7 @@ export default function PortfolioClient() {
         </div>
 
         {/* ===================================================================
-            VIEW 1: COCKPIT 360º (APRESENTAÇÃO HUMANA + VÍDEO PITCH + PROVAS REAIS)
+            VIEW 1: COCKPIT 360º (APRESENTAÇÃO HUMANA + PROJETOS DO PORTFÓLIO + PROVAS REAIS)
         =================================================================== */}
         {view === 'cockpit' && (
           <div className="space-y-6 animate-in fade-in duration-300">
@@ -809,7 +810,7 @@ export default function PortfolioClient() {
                       Comecei no Google Ads em 2013, passei pelo chão de loja da <strong className="text-white">Americanas.com</strong>, liderei a operação comercial e de marketing da <strong className="text-white">Mixs</strong> (<strong className="text-emerald-300">R$ 879,3 mil auditados no PDV</strong>), atuei como Growth Scientist na <strong className="text-white">V4 Company</strong> e hoje gerencio a estratégia de <strong className="text-cyan-200">38 clínicas médicas (+R$ 85k/mês) na We Marketing Médico</strong>.
                     </p>
                     <p className="text-xs sm:text-sm text-neutral-400">
-                      Construí este portfólio aberto para você testar na prática as <strong className="text-neutral-200">4 ferramentas reais</strong> que criei para resolver dores do meu dia a dia: o rastreamento de <strong className="text-white">GCLID no WhatsApp</strong>, a metodologia <strong className="text-white">Drawflow</strong>, a minha <strong className="text-white">planilha de DRE com trava de Stop-Loss</strong> e o <strong className="text-cyan-200">Servidor MCP dos Canais de Tráfego</strong> que fecha esse ciclo automaticamente.
+                      Construí este portfólio aberto para você navegar e testar as <strong className="text-neutral-200">4 entregas reais</strong> que desenvolvi para resolver dores do meu dia a dia: o rastreamento de <strong className="text-white">GCLID no WhatsApp</strong>, a metodologia <strong className="text-white">Drawflow</strong>, a minha <strong className="text-white">planilha de DRE com trava de Stop-Loss</strong> e o <strong className="text-cyan-200">Servidor MCP dos Canais de Tráfego</strong> que fecha esse ciclo automaticamente.
                     </p>
                   </div>
                 </div>
@@ -859,157 +860,83 @@ export default function PortfolioClient() {
                 </div>
               </div>
 
-              {/* Card Direito: VÍDEO PITCH REAL DO MARCO & GALERIA DE BASTIDORES */}
+              {/* Card Direito: MAPA DO PORTFÓLIO & PROJETOS EM PRODUÇÃO */}
               <div className="lg:col-span-5 p-6 sm:p-7 rounded-[32px] bg-gradient-to-b from-white/[0.06] to-white/[0.02] backdrop-blur-2xl border border-white/[0.09] shadow-[inset_0_1px_1px_rgba(255,255,255,0.16)] flex flex-col justify-between relative overflow-hidden space-y-4">
                 <div className="pointer-events-none absolute -bottom-16 -left-16 w-64 h-64 rounded-full bg-violet-500/15 blur-3xl" />
 
                 <div className="flex items-center justify-between gap-2 relative z-10">
                   <div>
                     <span className="text-[11px] uppercase tracking-wider text-cyan-300 font-medium">
-                      Bastidores & Demonstração Real
+                      Portfólio Técnico & Operacional
                     </span>
                     <h2 className="text-base sm:text-lg font-semibold text-white">
-                      {activeMediaTab === 'video'
-                        ? 'Vídeo: Eu explicando a arquitetura (Pitch)'
-                        : 'Fotos Reais & Bastidores da Operação'}
+                      Bastidores & Entregas Reais do Portfólio
                     </h2>
                   </div>
 
-                  <div className="inline-flex p-1 rounded-xl bg-black/40 border border-white/[0.08]">
-                    <button
-                      onClick={() => setActiveMediaTab('video')}
-                      className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition ${
-                        activeMediaTab === 'video'
-                          ? 'bg-cyan-400/20 text-cyan-200 border border-cyan-400/30'
-                          : 'text-neutral-400 hover:text-white'
-                      }`}
-                    >
-                      🎥 Vídeo Pitch
-                    </button>
-                    <button
-                      onClick={() => setActiveMediaTab('fotos')}
-                      className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition ${
-                        activeMediaTab === 'fotos'
-                          ? 'bg-cyan-400/20 text-cyan-200 border border-cyan-400/30'
-                          : 'text-neutral-400 hover:text-white'
-                      }`}
-                    >
-                      📸 Fotos ({BASTIDORES_PHOTOS.length})
-                    </button>
-                  </div>
+                  <a
+                    href="https://github.com/marco101aurelio-a11y"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-1.5 rounded-xl text-xs font-semibold bg-cyan-500/15 hover:bg-cyan-500/25 text-cyan-200 border border-cyan-400/30 transition flex items-center gap-1.5"
+                  >
+                    <Terminal className="w-3.5 h-3.5" />
+                    4 Repos GitHub
+                  </a>
                 </div>
 
-                {/* ABA DE MÍDIA 1: PLAYER DE VÍDEO NATIVO (/portifolio/midia/pitch-marco.mp4) */}
-                {activeMediaTab === 'video' ? (
-                  <div className="space-y-3 relative z-10">
-                    <div className="relative rounded-2xl overflow-hidden bg-black/60 border border-white/[0.1] aspect-video flex items-center justify-center group">
-                      {videoReady ? (
-                        <video
-                          controls
-                          preload="metadata"
-                          poster="/marco-aurelio.jpg"
-                          onError={() => setVideoReady(false)}
-                          className="w-full h-full object-cover"
-                        >
-                          <source src="/portifolio/midia/pitch-marco.mp4" type="video/mp4" />
-                          Seu navegador não suporta vídeo HTML5.
-                        </video>
-                      ) : (
-                        <div className="relative w-full h-full flex flex-col justify-between p-5 bg-gradient-to-t from-black/90 via-black/60 to-black/30">
-                          <img
-                            src="/marco-aurelio.jpg"
-                            alt="Marco Aurélio"
-                            className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition duration-500"
-                          />
-                          <div className="relative z-10 flex items-center justify-between">
-                            <span className="px-2.5 py-1 rounded-full text-[10px] font-mono bg-emerald-500/20 text-emerald-200 border border-emerald-400/30">
-                              Walkthrough em 1ª Pessoa • Marco Aurélio
-                            </span>
-                            <span className="text-[11px] font-mono text-cyan-200">1m30s</span>
-                          </div>
-                          <div className="relative z-10 space-y-1.5">
-                            <div className="text-sm sm:text-base font-semibold text-white">
-                              &ldquo;Como conectei GCLID, Planilha de DRE e o Servidor MCP nos canais de tráfego&rdquo;
-                            </div>
-                            <p className="text-[11px] text-neutral-300 leading-relaxed">
-                              Coloque seu arquivo de vídeo em <code className="text-cyan-300">public/portifolio/midia/pitch-marco.mp4</code> para ativar o player nativo automaticamente.
-                            </p>
-                          </div>
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Capítulos do Vídeo / O que mostro na tela */}
-                    <div className="grid grid-cols-3 gap-2 text-[11px]">
-                      <div
-                        onClick={() => setView('bpmn')}
-                        className="cursor-pointer p-2.5 rounded-xl bg-black/35 hover:bg-white/[0.06] border border-white/[0.06] transition"
-                      >
-                        <span className="font-mono text-cyan-300 block">00:00 • Parte 1</span>
-                        <span className="text-neutral-200 font-medium">O gargalo do GCLID no WhatsApp</span>
+                {/* GALERIA VISUAL DO PORTFÓLIO */}
+                <div className="space-y-3 relative z-10">
+                  <div
+                    onClick={() => setView(BASTIDORES_PHOTOS[selectedPhotoIdx].targetView)}
+                    className="cursor-pointer relative rounded-2xl overflow-hidden bg-black/60 border border-white/[0.1] aspect-video group"
+                  >
+                    <img
+                      src={BASTIDORES_PHOTOS[selectedPhotoIdx].src}
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (target.src !== window.location.origin + BASTIDORES_PHOTOS[selectedPhotoIdx].fallback) {
+                          target.src = BASTIDORES_PHOTOS[selectedPhotoIdx].fallback;
+                        }
+                      }}
+                      alt={BASTIDORES_PHOTOS[selectedPhotoIdx].title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                    />
+                    <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/95 via-black/75 to-transparent">
+                      <span className="text-[10px] font-mono text-cyan-300 uppercase">
+                        {BASTIDORES_PHOTOS[selectedPhotoIdx].tag}
+                      </span>
+                      <div className="text-sm font-semibold text-white mt-0.5">
+                        {BASTIDORES_PHOTOS[selectedPhotoIdx].title}
                       </div>
-                      <div
-                        onClick={() => setView('dre')}
-                        className="cursor-pointer p-2.5 rounded-xl bg-black/35 hover:bg-white/[0.06] border border-white/[0.06] transition"
-                      >
-                        <span className="font-mono text-violet-300 block">00:40 • Parte 2</span>
-                        <span className="text-neutral-200 font-medium">Minha planilha DRE & Stop-Loss</span>
-                      </div>
-                      <div
-                        onClick={() => setView('aistudio')}
-                        className="cursor-pointer p-2.5 rounded-xl bg-black/35 hover:bg-white/[0.06] border border-white/[0.06] transition"
-                      >
-                        <span className="font-mono text-emerald-300 block">01:15 • Parte 3</span>
-                        <span className="text-neutral-200 font-medium">O MCP rodando na Meta/Google</span>
-                      </div>
+                      <p className="text-[11px] text-neutral-300 mt-0.5 leading-snug">
+                        {BASTIDORES_PHOTOS[selectedPhotoIdx].caption}
+                      </p>
                     </div>
                   </div>
-                ) : (
-                  /* ABA DE MÍDIA 2: GALERIA DE FOTOS REAIS DO MARCO (/portifolio/midia/foto-1.jpg, foto-2.jpg, foto-3.jpg) */
-                  <div className="space-y-3 relative z-10">
-                    <div className="relative rounded-2xl overflow-hidden bg-black/60 border border-white/[0.1] aspect-video">
-                      <img
-                        src={BASTIDORES_PHOTOS[selectedPhotoIdx].src}
-                        onError={(e) => {
-                          const target = e.currentTarget;
-                          if (target.src !== window.location.origin + BASTIDORES_PHOTOS[selectedPhotoIdx].fallback) {
-                            target.src = BASTIDORES_PHOTOS[selectedPhotoIdx].fallback;
-                          }
-                        }}
-                        alt={BASTIDORES_PHOTOS[selectedPhotoIdx].title}
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/95 via-black/70 to-transparent">
-                        <span className="text-[10px] font-mono text-cyan-300 uppercase">
-                          {BASTIDORES_PHOTOS[selectedPhotoIdx].tag}
-                        </span>
-                        <div className="text-sm font-semibold text-white mt-0.5">
-                          {BASTIDORES_PHOTOS[selectedPhotoIdx].title}
-                        </div>
-                        <p className="text-[11px] text-neutral-300 mt-0.5 leading-snug">
-                          {BASTIDORES_PHOTOS[selectedPhotoIdx].caption}
-                        </p>
-                      </div>
-                    </div>
 
-                    <div className="grid grid-cols-3 gap-2">
-                      {BASTIDORES_PHOTOS.map((photo, idx) => (
-                        <button
-                          key={photo.tag}
-                          onClick={() => setSelectedPhotoIdx(idx)}
-                          className={`p-2 rounded-xl border text-left transition ${
-                            selectedPhotoIdx === idx
-                              ? 'bg-white/15 border-cyan-300/60 text-white'
-                              : 'bg-black/35 border-white/[0.06] text-neutral-400 hover:text-white'
-                          }`}
-                        >
-                          <div className="text-[10px] font-mono text-cyan-300 truncate">Foto 0{idx + 1}</div>
-                          <div className="text-[11px] font-medium truncate">{photo.title}</div>
-                        </button>
-                      ))}
-                    </div>
+                  {/* Seletores de Destaque do Portfólio */}
+                  <div className="grid grid-cols-3 gap-2">
+                    {[
+                      { idx: 0, step: '01 • Perfil', label: 'Trajetória & Base' },
+                      { idx: 1, step: '02 • Engenharia', label: 'GCLID & MCP Hub' },
+                      { idx: 2, step: '03 • Finanças', label: 'DRE & Stop-Loss' },
+                    ].map((item) => (
+                      <button
+                        key={item.step}
+                        onClick={() => setSelectedPhotoIdx(item.idx)}
+                        className={`p-2.5 rounded-xl border text-left transition ${
+                          selectedPhotoIdx === item.idx
+                            ? 'bg-white/15 border-cyan-300/60 text-white'
+                            : 'bg-black/35 border-white/[0.06] text-neutral-400 hover:text-white'
+                        }`}
+                      >
+                        <div className="text-[10px] font-mono text-cyan-300 truncate">{item.step}</div>
+                        <div className="text-[11px] font-medium truncate">{item.label}</div>
+                      </button>
+                    ))}
                   </div>
-                )}
+                </div>
               </div>
             </div>
 
