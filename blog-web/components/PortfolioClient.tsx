@@ -397,7 +397,7 @@ export default function PortfolioClient() {
   const [activeNode, setActiveNode] = useState<number>(0);
   const [simulatingBpmn, setSimulatingBpmn] = useState<boolean>(false);
   const [serverLogs, setServerLogs] = useState<string[]>([
-    '✨ [LUMA-OS] Motor de Atribuição WE online. Clique em "Simular Servidor" para testar o fluxo GCLID.',
+    '✨ [SERVIDOR WE] Fluxo GCLID → WhatsApp → CRM pronto. Clique em "Testar Fluxo Real" para ver etapa por etapa.',
   ]);
 
   useEffect(() => {
@@ -626,11 +626,41 @@ export default function PortfolioClient() {
     retentionRatePct,
   ]);
 
-  // --- Estado AI Studio, MCP Traffic Channels & Carreira ---
+  // --- Estado AI Studio, MCP Traffic Channels, Vídeo Pitch & Carreira ---
   const [selectedSystem, setSelectedSystem] = useState<number>(0);
   const [selectedMcpChannel, setSelectedMcpChannel] = useState<number>(0);
   const [logProgress, setLogProgress] = useState<number>(4);
   const [selectedCareerIdx, setSelectedCareerIdx] = useState<number>(5);
+  const [videoReady, setVideoReady] = useState<boolean>(true);
+  const [activeMediaTab, setActiveMediaTab] = useState<'video' | 'fotos'>('video');
+  const [selectedPhotoIdx, setSelectedPhotoIdx] = useState<number>(0);
+
+  const BASTIDORES_PHOTOS = [
+    {
+      src: '/portifolio/midia/foto-1.jpg',
+      fallback: '/marco-aurelio.jpg',
+      tag: 'Operação & Estratégia • Campo Grande / MS',
+      title: 'Da trincheira comercial à engenharia de tráfego e dados',
+      caption:
+        'Mais de uma década conectando o que acontece no balcão de vendas e no WhatsApp das clínicas com o algoritmo do Google Ads e da Meta.',
+    },
+    {
+      src: '/portifolio/midia/foto-2.jpg',
+      fallback: '/covers/ads_mcp_cg_2026.jpg',
+      tag: 'Bastidores • We Marketing Médico & V4',
+      title: 'Auditoria diária de 38 clínicas médicas (+R$ 85k/mês) e DRE',
+      caption:
+        'Foi a dor de auditar dezenas de contas toda manhã que me levou a programar meu próprio Servidor MCP integrado à planilha de DRE.',
+    },
+    {
+      src: '/portifolio/midia/foto-3.jpg',
+      fallback: '/covers/human_in_the_loop_governanca_ia_2026.jpg',
+      tag: 'Trajetória • UNR Argentina, Americanas & Mixs',
+      title: 'Repertório humano antes da automação',
+      caption:
+        'Vivência na Universidad Nacional de Rosario (Espanhol C2), operação O2O na Americanas.com e R$ 879,3k gerados no PDV da Mixs.',
+    },
+  ];
 
   const triggerSystemSimulation = (idx: number) => {
     setSelectedSystem(idx);
@@ -752,52 +782,51 @@ export default function PortfolioClient() {
         </div>
 
         {/* ===================================================================
-            VIEW 1: COCKPIT 360º (BENTO GLASS SAAS — LUMA INSPIRED)
+            VIEW 1: COCKPIT 360º (APRESENTAÇÃO HUMANA + VÍDEO PITCH + PROVAS REAIS)
         =================================================================== */}
         {view === 'cockpit' && (
           <div className="space-y-6 animate-in fade-in duration-300">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-              {/* Card Esquerdo: Tese Editorial + Métricas Flutuantes */}
+              {/* Card Esquerdo: Carta de Apresentação em 1ª Pessoa + Métricas Reais de Trincheira */}
               <div className="lg:col-span-7 p-7 sm:p-9 rounded-[32px] bg-gradient-to-br from-white/[0.05] via-white/[0.02] to-transparent backdrop-blur-2xl border border-white/[0.08] shadow-[inset_0_1px_1px_rgba(255,255,255,0.14)] flex flex-col justify-between relative overflow-hidden">
                 <div className="pointer-events-none absolute -right-20 -top-20 w-72 h-72 rounded-full bg-cyan-400/10 blur-3xl" />
 
                 <div className="space-y-5 relative z-10">
-                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/[0.1] text-xs text-cyan-200">
-                    <Radio className="w-3.5 h-3.5 text-emerald-400 animate-pulse" />
-                    Engenharia de Receita • Tráfego Pago + Tracking Server-Side + MCP Traffic Hub
+                  <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/[0.1] text-xs text-cyan-200">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                    Prazer, sou o Marco Aurélio • Campo Grande, MS (Espanhol C2 • 10+ anos de mercado)
                   </div>
 
-                  <h1 className="text-3xl sm:text-5xl font-light tracking-tight text-white leading-[1.12]">
-                    Onde a operação de tráfego encontra a{' '}
+                  <h1 className="text-3xl sm:text-4xl lg:text-[42px] font-light tracking-tight text-white leading-[1.15]">
+                    Eu não vim do código puro. Eu vim do{' '}
                     <span className="font-semibold bg-gradient-to-r from-cyan-200 via-violet-200 to-emerald-200 bg-clip-text text-transparent">
-                      governança de DRE e agentes MCP.
+                      balcão de vendas e do tráfego pago — e programei o que faltava.
                     </span>
                   </h1>
 
-                  <p className="text-sm sm:text-base text-neutral-300/90 leading-relaxed max-w-xl font-normal">
-                    Um ecossistema fechado que une{' '}
-                    <strong className="text-white font-medium">Atribuição Server-Side (GCLID/BPMN 2.0)</strong>,{' '}
-                    <strong className="text-white font-medium">Travas de CAC & Stop-Loss por DRE</strong> e um{' '}
-                    <strong className="text-cyan-200 font-medium">
-                      Servidor MCP conectando Meta Ads, Google Ads e TikTok ao motor matemático Google JAX
-                    </strong>{' '}
-                    para auditar lucro, escalar verba e gerar novos criativos em tempo real.
-                  </p>
+                  <div className="space-y-3 text-sm sm:text-[15px] text-neutral-300/95 leading-relaxed max-w-2xl font-normal">
+                    <p>
+                      Comecei no Google Ads em 2013, passei pelo chão de loja da <strong className="text-white">Americanas.com</strong>, liderei a operação comercial e de marketing da <strong className="text-white">Mixs</strong> (<strong className="text-emerald-300">R$ 879,3 mil auditados no PDV</strong>), atuei como Growth Scientist na <strong className="text-white">V4 Company</strong> e hoje gerencio a estratégia de <strong className="text-cyan-200">38 clínicas médicas (+R$ 85k/mês) na We Marketing Médico</strong>.
+                    </p>
+                    <p className="text-xs sm:text-sm text-neutral-400">
+                      Construí este portfólio aberto para você testar na prática as <strong className="text-neutral-200">4 ferramentas reais</strong> que criei para resolver dores do meu dia a dia: o rastreamento de <strong className="text-white">GCLID no WhatsApp</strong>, a metodologia <strong className="text-white">Drawflow</strong>, a minha <strong className="text-white">planilha de DRE com trava de Stop-Loss</strong> e o <strong className="text-cyan-200">Servidor MCP dos Canais de Tráfego</strong> que fecha esse ciclo automaticamente.
+                    </p>
+                  </div>
                 </div>
 
-                <div className="grid grid-cols-3 gap-3 pt-8 relative z-10">
+                <div className="grid grid-cols-3 gap-3 pt-7 relative z-10">
                   <div
                     onClick={() => setView('performance')}
                     className="cursor-pointer group p-4 rounded-2xl bg-white/[0.03] hover:bg-white/[0.06] border border-white/[0.07] transition"
                   >
                     <div className="text-[11px] text-neutral-400 flex items-center justify-between">
-                      <span>Faturamento CRM</span>
+                      <span>Case Mixs (PDV)</span>
                       <ArrowUpRight className="w-3.5 h-3.5 text-cyan-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition" />
                     </div>
                     <div className="text-xl sm:text-2xl font-semibold text-white tracking-tight mt-1">
                       R$ 879,3k
                     </div>
-                    <div className="text-[11px] text-emerald-300 mt-0.5">ROAS 96,4x auditado</div>
+                    <div className="text-[11px] text-emerald-300 mt-0.5">ROAS 96,4x em 19 sem.</div>
                   </div>
 
                   <div
@@ -805,7 +834,7 @@ export default function PortfolioClient() {
                     className="cursor-pointer group p-4 rounded-2xl bg-white/[0.03] hover:bg-white/[0.06] border border-white/[0.07] transition"
                   >
                     <div className="text-[11px] text-neutral-400 flex items-center justify-between">
-                      <span>Gestão Médica</span>
+                      <span>We Marketing Médico</span>
                       <ArrowUpRight className="w-3.5 h-3.5 text-violet-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition" />
                     </div>
                     <div className="text-xl sm:text-2xl font-semibold text-white tracking-tight mt-1">
@@ -819,113 +848,168 @@ export default function PortfolioClient() {
                     className="cursor-pointer group p-4 rounded-2xl bg-white/[0.03] hover:bg-white/[0.06] border border-white/[0.07] transition"
                   >
                     <div className="text-[11px] text-neutral-400 flex items-center justify-between">
-                      <span>Custo por Lead</span>
+                      <span>Servidor MCP Próprio</span>
                       <ArrowUpRight className="w-3.5 h-3.5 text-emerald-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition" />
                     </div>
                     <div className="text-xl sm:text-2xl font-semibold text-white tracking-tight mt-1">
-                      R$ 2,07
+                      23 Tools
                     </div>
-                    <div className="text-[11px] text-cyan-200 mt-0.5">4.411 leads • 662 vendas</div>
+                    <div className="text-[11px] text-cyan-200 mt-0.5">Meta + Google + DRE JAX</div>
                   </div>
                 </div>
               </div>
 
-              {/* Card Direito: Luma AI Radial Gauge & Live Server Pulse */}
-              <div className="lg:col-span-5 p-7 sm:p-8 rounded-[32px] bg-gradient-to-b from-white/[0.06] to-white/[0.02] backdrop-blur-2xl border border-white/[0.09] shadow-[inset_0_1px_1px_rgba(255,255,255,0.16)] flex flex-col justify-between relative overflow-hidden">
+              {/* Card Direito: VÍDEO PITCH REAL DO MARCO & GALERIA DE BASTIDORES */}
+              <div className="lg:col-span-5 p-6 sm:p-7 rounded-[32px] bg-gradient-to-b from-white/[0.06] to-white/[0.02] backdrop-blur-2xl border border-white/[0.09] shadow-[inset_0_1px_1px_rgba(255,255,255,0.16)] flex flex-col justify-between relative overflow-hidden space-y-4">
                 <div className="pointer-events-none absolute -bottom-16 -left-16 w-64 h-64 rounded-full bg-violet-500/15 blur-3xl" />
 
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between gap-2 relative z-10">
                   <div>
                     <span className="text-[11px] uppercase tracking-wider text-cyan-300 font-medium">
-                      Live Attribution Telemetry
+                      Bastidores & Demonstração Real
                     </span>
-                    <h2 className="text-lg font-semibold text-white">
-                      Motor BPMN 2.0 (GCLID → CRM)
+                    <h2 className="text-base sm:text-lg font-semibold text-white">
+                      {activeMediaTab === 'video'
+                        ? 'Vídeo: Eu explicando a arquitetura (Pitch)'
+                        : 'Fotos Reais & Bastidores da Operação'}
                     </h2>
                   </div>
-                  <button
-                    onClick={() => setSimulatingBpmn(true)}
-                    disabled={simulatingBpmn}
-                    className="px-3.5 py-2 rounded-xl text-xs font-semibold text-neutral-950 bg-gradient-to-r from-cyan-300 to-emerald-300 hover:opacity-90 disabled:opacity-50 transition flex items-center gap-1.5 shadow-md shadow-cyan-500/20"
-                  >
-                    <Play className="w-3.5 h-3.5 fill-current" />
-                    {simulatingBpmn ? 'Simulando...' : 'Simular Servidor'}
-                  </button>
+
+                  <div className="inline-flex p-1 rounded-xl bg-black/40 border border-white/[0.08]">
+                    <button
+                      onClick={() => setActiveMediaTab('video')}
+                      className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition ${
+                        activeMediaTab === 'video'
+                          ? 'bg-cyan-400/20 text-cyan-200 border border-cyan-400/30'
+                          : 'text-neutral-400 hover:text-white'
+                      }`}
+                    >
+                      🎥 Vídeo Pitch
+                    </button>
+                    <button
+                      onClick={() => setActiveMediaTab('fotos')}
+                      className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition ${
+                        activeMediaTab === 'fotos'
+                          ? 'bg-cyan-400/20 text-cyan-200 border border-cyan-400/30'
+                          : 'text-neutral-400 hover:text-white'
+                      }`}
+                    >
+                      📸 Fotos ({BASTIDORES_PHOTOS.length})
+                    </button>
+                  </div>
                 </div>
 
-                <div className="flex items-center gap-6 my-4">
-                  <div className="relative w-32 h-32 shrink-0 flex items-center justify-center">
-                    <svg className="w-full h-full -rotate-90" viewBox="0 0 120 120">
-                      <defs>
-                        <linearGradient id="lumaRing" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" stopColor="#67e8f9" />
-                          <stop offset="50%" stopColor="#a78bfa" />
-                          <stop offset="100%" stopColor="#34d399" />
-                        </linearGradient>
-                      </defs>
-                      <circle
-                        cx="60"
-                        cy="60"
-                        r="50"
-                        fill="none"
-                        stroke="rgba(255,255,255,0.06)"
-                        strokeWidth="10"
-                      />
-                      <circle
-                        cx="60"
-                        cy="60"
-                        r="50"
-                        fill="none"
-                        stroke="url(#lumaRing)"
-                        strokeWidth="10"
-                        strokeLinecap="round"
-                        strokeDasharray="314"
-                        strokeDashoffset={314 - (314 * ((activeNode + 1) * 20)) / 100}
-                        className="transition-all duration-500 ease-out"
-                      />
-                    </svg>
-                    <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-                      <span className="text-2xl font-semibold text-white">
-                        {(activeNode + 1) * 20}%
-                      </span>
-                      <span className="text-[10px] text-cyan-300 uppercase tracking-wider">
-                        Etapa 0{activeNode + 1}/05
-                      </span>
+                {/* ABA DE MÍDIA 1: PLAYER DE VÍDEO NATIVO (/portifolio/midia/pitch-marco.mp4) */}
+                {activeMediaTab === 'video' ? (
+                  <div className="space-y-3 relative z-10">
+                    <div className="relative rounded-2xl overflow-hidden bg-black/60 border border-white/[0.1] aspect-video flex items-center justify-center group">
+                      {videoReady ? (
+                        <video
+                          controls
+                          preload="metadata"
+                          poster="/marco-aurelio.jpg"
+                          onError={() => setVideoReady(false)}
+                          className="w-full h-full object-cover"
+                        >
+                          <source src="/portifolio/midia/pitch-marco.mp4" type="video/mp4" />
+                          Seu navegador não suporta vídeo HTML5.
+                        </video>
+                      ) : (
+                        <div className="relative w-full h-full flex flex-col justify-between p-5 bg-gradient-to-t from-black/90 via-black/60 to-black/30">
+                          <img
+                            src="/marco-aurelio.jpg"
+                            alt="Marco Aurélio"
+                            className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition duration-500"
+                          />
+                          <div className="relative z-10 flex items-center justify-between">
+                            <span className="px-2.5 py-1 rounded-full text-[10px] font-mono bg-emerald-500/20 text-emerald-200 border border-emerald-400/30">
+                              Walkthrough em 1ª Pessoa • Marco Aurélio
+                            </span>
+                            <span className="text-[11px] font-mono text-cyan-200">1m30s</span>
+                          </div>
+                          <div className="relative z-10 space-y-1.5">
+                            <div className="text-sm sm:text-base font-semibold text-white">
+                              &ldquo;Como conectei GCLID, Planilha de DRE e o Servidor MCP nos canais de tráfego&rdquo;
+                            </div>
+                            <p className="text-[11px] text-neutral-300 leading-relaxed">
+                              Coloque seu arquivo de vídeo em <code className="text-cyan-300">public/portifolio/midia/pitch-marco.mp4</code> para ativar o player nativo automaticamente.
+                            </p>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Capítulos do Vídeo / O que mostro na tela */}
+                    <div className="grid grid-cols-3 gap-2 text-[11px]">
+                      <div
+                        onClick={() => setView('bpmn')}
+                        className="cursor-pointer p-2.5 rounded-xl bg-black/35 hover:bg-white/[0.06] border border-white/[0.06] transition"
+                      >
+                        <span className="font-mono text-cyan-300 block">00:00 • Parte 1</span>
+                        <span className="text-neutral-200 font-medium">O gargalo do GCLID no WhatsApp</span>
+                      </div>
+                      <div
+                        onClick={() => setView('dre')}
+                        className="cursor-pointer p-2.5 rounded-xl bg-black/35 hover:bg-white/[0.06] border border-white/[0.06] transition"
+                      >
+                        <span className="font-mono text-violet-300 block">00:40 • Parte 2</span>
+                        <span className="text-neutral-200 font-medium">Minha planilha DRE & Stop-Loss</span>
+                      </div>
+                      <div
+                        onClick={() => setView('aistudio')}
+                        className="cursor-pointer p-2.5 rounded-xl bg-black/35 hover:bg-white/[0.06] border border-white/[0.06] transition"
+                      >
+                        <span className="font-mono text-emerald-300 block">01:15 • Parte 3</span>
+                        <span className="text-neutral-200 font-medium">O MCP rodando na Meta/Google</span>
+                      </div>
                     </div>
                   </div>
+                ) : (
+                  /* ABA DE MÍDIA 2: GALERIA DE FOTOS REAIS DO MARCO (/portifolio/midia/foto-1.jpg, foto-2.jpg, foto-3.jpg) */
+                  <div className="space-y-3 relative z-10">
+                    <div className="relative rounded-2xl overflow-hidden bg-black/60 border border-white/[0.1] aspect-video">
+                      <img
+                        src={BASTIDORES_PHOTOS[selectedPhotoIdx].src}
+                        onError={(e) => {
+                          const target = e.currentTarget;
+                          if (target.src !== window.location.origin + BASTIDORES_PHOTOS[selectedPhotoIdx].fallback) {
+                            target.src = BASTIDORES_PHOTOS[selectedPhotoIdx].fallback;
+                          }
+                        }}
+                        alt={BASTIDORES_PHOTOS[selectedPhotoIdx].title}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/95 via-black/70 to-transparent">
+                        <span className="text-[10px] font-mono text-cyan-300 uppercase">
+                          {BASTIDORES_PHOTOS[selectedPhotoIdx].tag}
+                        </span>
+                        <div className="text-sm font-semibold text-white mt-0.5">
+                          {BASTIDORES_PHOTOS[selectedPhotoIdx].title}
+                        </div>
+                        <p className="text-[11px] text-neutral-300 mt-0.5 leading-snug">
+                          {BASTIDORES_PHOTOS[selectedPhotoIdx].caption}
+                        </p>
+                      </div>
+                    </div>
 
-                  <div className="flex-1 space-y-1.5">
-                    {BPMN_NODES.map((n, i) => {
-                      const active = i === activeNode;
-                      return (
+                    <div className="grid grid-cols-3 gap-2">
+                      {BASTIDORES_PHOTOS.map((photo, idx) => (
                         <button
-                          key={n.id}
-                          onClick={() => setActiveNode(i)}
-                          className={`w-full text-left px-3 py-1.5 rounded-xl text-xs transition flex items-center justify-between ${
-                            active
-                              ? 'bg-white/12 text-white font-medium border border-white/15'
-                              : 'text-neutral-400 hover:text-neutral-200 hover:bg-white/[0.03]'
+                          key={photo.tag}
+                          onClick={() => setSelectedPhotoIdx(idx)}
+                          className={`p-2 rounded-xl border text-left transition ${
+                            selectedPhotoIdx === idx
+                              ? 'bg-white/15 border-cyan-300/60 text-white'
+                              : 'bg-black/35 border-white/[0.06] text-neutral-400 hover:text-white'
                           }`}
                         >
-                          <span className="truncate">
-                            {n.step}. {n.layer}
-                          </span>
-                          <span className={`w-2 h-2 rounded-full ${active ? 'bg-emerald-400 animate-ping' : 'bg-white/15'}`} />
+                          <div className="text-[10px] font-mono text-cyan-300 truncate">Foto 0{idx + 1}</div>
+                          <div className="text-[11px] font-medium truncate">{photo.title}</div>
                         </button>
-                      );
-                    })}
+                      ))}
+                    </div>
                   </div>
-                </div>
-
-                <div className="p-3.5 rounded-2xl bg-black/40 border border-white/[0.07] font-mono text-[11px] text-cyan-200 flex items-center justify-between gap-2">
-                  <span className="truncate">{serverLogs[serverLogs.length - 1]}</span>
-                  <button
-                    onClick={() => setView('bpmn')}
-                    className="text-white/70 hover:text-white underline shrink-0"
-                  >
-                    Expandir
-                  </button>
-                </div>
+                )}
               </div>
             </div>
 
@@ -953,6 +1037,11 @@ export default function PortfolioClient() {
                 <div className="relative pt-2">
                   <svg viewBox={`0 0 ${svgChart.width} ${svgChart.height}`} className="w-full h-36 overflow-visible">
                     <defs>
+                      <linearGradient id="lumaRing" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#67e8f9" />
+                        <stop offset="50%" stopColor="#a78bfa" />
+                        <stop offset="100%" stopColor="#34d399" />
+                      </linearGradient>
                       <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
                         <stop offset="0%" stopColor="#67e8f9" stopOpacity="0.38" />
                         <stop offset="60%" stopColor="#a78bfa" stopOpacity="0.12" />
@@ -1101,25 +1190,28 @@ export default function PortfolioClient() {
         {view === 'bpmn' && (
           <div className="space-y-6 animate-in fade-in duration-300">
             <div className="p-6 sm:p-8 rounded-[32px] bg-white/[0.03] backdrop-blur-2xl border border-white/[0.08] space-y-8">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div>
+              <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+                <div className="space-y-2 max-w-3xl">
                   <span className="text-xs uppercase tracking-wider text-cyan-300 font-medium">
-                    Arquitetura BPMN 2.0 • We Marketing Médico (38 Clínicas)
+                    Na Trincheira da We Marketing Médico • 38 Clínicas (+R$ 85k/mês)
                   </span>
-                  <h2 className="text-2xl sm:text-3xl font-light text-white mt-1">
-                    Simulador de Atribuição Server-Side:{' '}
-                    <span className="font-semibold text-cyan-200">GCLID → WhatsApp → CRM → Google Ads</span>
+                  <h2 className="text-2xl sm:text-3xl font-light text-white">
+                    Como resolvi a perda de rastreamento no WhatsApp:{' '}
+                    <span className="font-semibold text-cyan-200">GCLID → WABA → CRM → Google Ads</span>
                   </h2>
+                  <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed">
+                    Cuidando de 38 clínicas médicas, percebi que o Google Ads ficava &ldquo;cego&rdquo; quando o paciente saía da Landing Page para o WhatsApp: a campanha otimizava para curiosos de convênio em vez de pacientes particulares. Desenhei esta arquitetura <strong className="text-white">BPMN 2.0</strong> para capturar o <code className="text-cyan-200">GCLID</code> antes do redirecionamento, cruzar com o agendamento real no CRM e devolver ao Google apenas as consultas confirmadas.
+                  </p>
                 </div>
 
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 shrink-0">
                   <button
                     onClick={() => setSimulatingBpmn(true)}
                     disabled={simulatingBpmn}
                     className="px-5 py-2.5 rounded-2xl text-xs font-semibold text-neutral-950 bg-gradient-to-r from-cyan-300 via-teal-200 to-emerald-300 hover:opacity-95 disabled:opacity-50 transition shadow-lg shadow-cyan-500/20 flex items-center gap-2"
                   >
                     <Play className="w-3.5 h-3.5 fill-current" />
-                    {simulatingBpmn ? 'Transmitindo Pacotes...' : 'Disparar Simulação do Servidor'}
+                    {simulatingBpmn ? 'Rodando Fluxo...' : 'Testar Fluxo Passo a Passo'}
                   </button>
                   <a
                     href="/portifolio/arquitetura-bpmn-crm-google-ads.pdf"
@@ -1128,7 +1220,7 @@ export default function PortfolioClient() {
                     className="px-4 py-2.5 rounded-2xl text-xs font-medium text-neutral-200 bg-white/[0.05] hover:bg-white/[0.1] border border-white/[0.1] transition flex items-center gap-1.5"
                   >
                     <Download className="w-3.5 h-3.5 text-cyan-300" />
-                    Diagrama PDF
+                    Meu Diagrama BPMN (PDF)
                   </a>
                 </div>
               </div>
@@ -1227,15 +1319,18 @@ export default function PortfolioClient() {
           <div className="space-y-6 animate-in fade-in duration-300">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
               <div className="lg:col-span-8 p-7 rounded-[32px] bg-white/[0.03] backdrop-blur-2xl border border-white/[0.08] space-y-6">
-                <div className="flex flex-wrap items-center justify-between gap-4">
-                  <div>
+                <div className="flex flex-wrap items-start justify-between gap-4">
+                  <div className="space-y-1.5 max-w-2xl">
                     <span className="text-xs uppercase tracking-wider text-emerald-300">
-                      Dados Reais Auditados • CUSTO 2024 - NOVA TRÁFEGO
+                      Minha Planilha Real de Auditoria • Mixs (19 Semanas no PDV)
                     </span>
-                    <h2 className="text-2xl font-light text-white mt-0.5">
-                      Evolução de Receita no CRM:{' '}
-                      <span className="font-semibold text-emerald-200">R$ 879.306,89 (ROAS 96,4x)</span>
+                    <h2 className="text-2xl font-light text-white">
+                      Como transformei R$ 9.122 em{' '}
+                      <span className="font-semibold text-emerald-200">R$ 879.306,89 no balcão (ROAS 96,4x)</span>
                     </h2>
+                    <p className="text-xs text-neutral-300 leading-relaxed">
+                      Estes números não são estimativa de gerenciador: são contratos fechados e auditados semana a semana no CRM e no caixa da loja. Clique em cada ponto da curva abaixo para ver quanto investi, quantos leads chegaram e quanto vendemos em cada semana.
+                    </p>
                   </div>
 
                   <button
