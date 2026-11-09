@@ -20,6 +20,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
+      url: `${baseUrl}/portifolio`,
+      lastModified: '2026-11-09',
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/sobre`,
       lastModified: '2026-10-08',
       changeFrequency: 'monthly',

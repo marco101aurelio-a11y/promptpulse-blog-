@@ -43,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className={`${geistSans.variable} ${geistMono.variable} dark antialiased scroll-smooth`}>
+    <html lang="pt-BR" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable} dark antialiased scroll-smooth`}>
       <head>
         <script
           async
@@ -51,7 +51,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-neutral-950 text-neutral-100 selection:bg-cyan-500/30 selection:text-cyan-200">
+      <body suppressHydrationWarning className="min-h-screen flex flex-col bg-neutral-950 text-neutral-100 selection:bg-cyan-500/30 selection:text-cyan-200">
         {/* Google Analytics (gtag.js) */}
         <Script
           strategy="afterInteractive"

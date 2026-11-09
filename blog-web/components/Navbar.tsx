@@ -51,6 +51,13 @@ export default function Navbar() {
               Produtividade
             </Link>
             <Link
+              href="/portifolio"
+              className="text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors flex items-center gap-1.5"
+            >
+              <Sparkles className="w-4 h-4 text-fuchsia-400" />
+              Portfólio Martech
+            </Link>
+            <Link
               href="/sobre"
               className="text-sm font-medium text-neutral-300 hover:text-white transition-colors"
             >
@@ -97,6 +104,13 @@ export default function Navbar() {
             className="block px-3 py-2 rounded-lg text-base font-medium text-neutral-300 hover:text-white hover:bg-neutral-800"
           >
             Artigos de IA
+          </Link>
+          <Link
+            href="/portifolio"
+            onClick={() => setIsOpen(false)}
+            className="block px-3 py-2 rounded-lg text-base font-semibold text-cyan-400 hover:bg-neutral-800"
+          >
+            Portfólio Martech
           </Link>
           <Link
             href="/sobre"
