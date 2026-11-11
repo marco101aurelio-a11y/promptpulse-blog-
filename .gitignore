@@ -1,4 +1,4 @@
-blog_posts
+﻿blog_posts
 __pycache__
 blog_topics.json
 .env
@@ -12,3 +12,6 @@ projeto-blog-automatico-*.json
 *-credentials.json
 service-account*.json
 sites/
+# Logs locais e documentos pessoais do portfolio (planilhas/CV privados)
+blog-web/dev_*.log
+/portifolio/

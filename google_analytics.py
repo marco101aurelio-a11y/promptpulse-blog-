@@ -136,7 +136,19 @@ def test_connection(property_id=None):
 
     except Exception as e:
         error_msg = str(e)
-        print(f"  ❌ Erro ao consultar a API: {error_msg}")
+        print(f"  ❌ Erro ao consultar a API para Property {prop_id}: {error_msg}")
+        try:
+            from google.auth.transport.requests import AuthorizedSession
+            admin_creds = service_account.Credentials.from_service_account_file(
+                config.GA_CREDENTIALS_PATH,
+                scopes=["https://www.googleapis.com/auth/analytics.readonly"],
+            )
+            authed_session = AuthorizedSession(admin_creds)
+            resp = authed_session.get("https://analyticsadmin.googleapis.com/v1beta/accountSummaries")
+            print(f"\n  🔎 Buscando propriedades visíveis via Analytics Admin API (HTTP {resp.status_code}):")
+            print(f"     {resp.text[:1000]}")
+        except Exception as admin_err:
+            print(f"  ⚠️ Erro ao consultar accountSummaries: {admin_err}")
         if "PERMISSION_DENIED" in error_msg or "User does not have sufficient permissions" in error_msg:
             print("\n  👉 MOTIVO: A Conta de Serviço ainda não foi adicionada à sua propriedade no GA4.")
             print("  COMO RESOLVER:")
@@ -260,5 +272,66 @@ def get_post_performance(slug, days=30, property_id=None):
     }
 
 if __name__ == "__main__":
-    # Execução via linha de comando para teste rápido
-    test_connection()
+    # Execução via linha de comando para teste rápido e relatório completo
+    if test_connection():
+        try:
+            rt = get_realtime_active_users()
+            print(f"\n⚡ Usuários em Tempo Real (últimos 30 min): {rt}")
+        except Exception as e:
+            print(f"\n⚠️ Erro no Realtime: {e}")
+
+        try:
+            client = get_analytics_client()
+            prop_id = get_clean_property_id()
+            req30 = RunReportRequest(
+                property=f"properties/{prop_id}",
+                date_ranges=[DateRange(start_date="30daysAgo", end_date="today")],
+                metrics=[
+                    Metric(name="activeUsers"),
+                    Metric(name="newUsers"),
+                    Metric(name="screenPageViews"),
+                    Metric(name="sessions"),
+                    Metric(name="engagedSessions"),
+                    Metric(name="userEngagementDuration"),
+                ],
+            )
+            res30 = client.run_report(req30)
+            if res30.rows:
+                vals = [m.value for m in res30.rows[0].metric_values]
+                print(f"\n📅 Resumo Últimos 30 Dias:")
+                print(f"   • Usuários Ativos: {vals[0]} (Novos: {vals[1]})")
+                print(f"   • Visualizações de Página (Pageviews): {vals[2]}")
+                print(f"   • Sessões: {vals[3]} (Sessões Engajadas: {vals[4]})")
+                print(f"   • Tempo Total de Engajamento: {float(vals[5]):.0f}s")
+        except Exception as e:
+            print(f"\n⚠️ Erro no resumo 30d: {e}")
+
+        try:
+            top = get_top_pages(days=30, limit=15)
+            print(f"\n🏆 Top Páginas (Últimos 30 dias):")
+            for i, p in enumerate(top, 1):
+                print(f"   {i:02d}. {p['path']} | {p['views']} views | {p['users']} users | {p['avg_engagement_seconds']}s engaj. | {p['title']}")
+        except Exception as e:
+            print(f"\n⚠️ Erro ao listar top páginas: {e}")
+
+        try:
+            client = get_analytics_client()
+            prop_id = get_clean_property_id()
+            req_src = RunReportRequest(
+                property=f"properties/{prop_id}",
+                date_ranges=[DateRange(start_date="30daysAgo", end_date="today")],
+                dimensions=[Dimension(name="sessionSourceMedium")],
+                metrics=[Metric(name="sessions"), Metric(name="activeUsers"), Metric(name="screenPageViews")],
+                limit=10,
+            )
+            res_src = client.run_report(req_src)
+            if res_src.rows:
+                print(f"\n🌐 Principais Origens de Tráfego (Últimos 30 dias):")
+                for r in res_src.rows:
+                    src = r.dimension_values[0].value
+                    sess = r.metric_values[0].value
+                    usr = r.metric_values[1].value
+                    pv = r.metric_values[2].value
+                    print(f"   • {src}: {sess} sessões | {usr} usuários | {pv} views")
+        except Exception as e:
+            print(f"\n⚠️ Erro ao listar origens: {e}")
