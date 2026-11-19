@@ -1,5 +1,6 @@
 ---
 title: "Do Google Keep ao Drive: Como Criar um Segundo Cérebro Automatizado com Gemini"
+seoTitle: "Google Keep ao Drive: Segundo Cérebro com Gemini"
 date: "2026-10-12"
 excerpt: "Aprenda a estruturar um segundo cérebro digital conectando Google Keep e Google Drive com inteligência artificial para organizar notas e projetos automaticamente."
 coverImage: "https://images.pexels.com/photos/8547193/pexels-photo-8547193.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"

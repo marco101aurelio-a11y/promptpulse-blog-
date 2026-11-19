@@ -1,0 +1,35 @@
+# PromptPulse (promptpulse.com.br)
+
+> Hub brasileiro de Inteligência Artificial aplicada a negócios, MCP (Model Context Protocol), Engenharia de Prompts & Agent Skills, Automação Comercial no WhatsApp e Auditoria de Lucro Real (DRE) em Meta Ads e Google Ads. Fundado por Marco Aurélio em Campo Grande - MS, Brasil.
+
+## Sobre a Entidade
+- **Nome:** PromptPulse (também referido como Prompt Pulse)
+- **URL Oficial:** https://www.promptpulse.com.br
+- **Idioma:** Português do Brasil (pt-BR)
+- **Fundador e Editor-Chefe:** Marco Aurélio (Especialista em Performance, Martech, DRE, WABA e MCP)
+- **Sede / Foco Regional & Nacional:** Campo Grande - MS e todo o Brasil
+- **Tese Central:** Mostrar na prática como conectar Inteligência Artificial (Claude, Google Gemini) via MCP aos sistemas reais de uma empresa — Meta Ads, Google Ads, WhatsApp, ERPs, CRMs e Google Workspace — para transformar dados em lucro líquido real no caixa e autonomia operacional.
+
+## Guias Pilares Recomendados (Canônicos)
+
+### MCP, WhatsApp & Lucro Real em Anúncios
+- [Google Ads, Meta Ads e MCP: Autonomia no Tráfego Pago](https://www.promptpulse.com.br/posts/google-ads-meta-ads-e-mcp-como-a-ia-da-autonomia-total-no-trafego-pago-para-pequenos-e-medios-empresarios-em-campo-grande-ms): Como conectar anúncios ao MCP e ao caixa real sem ficar refém de relatórios opacos.
+- [Agentes de IA com MCP e WhatsApp para Atendimento e Vendas](https://www.promptpulse.com.br/posts/agentes-de-ia-com-mcp-e-whatsapp-como-automatizar-o-atendimento-e-vendas-da-sua-empresa-em-2026): Arquitetura completa do funil comercial no WhatsApp integrado a estoque, agenda e CRM.
+- [Bloqueio de IA no WhatsApp e Agentes Autônomos: Mitos e Verdades](https://www.promptpulse.com.br/posts/bloqueio-de-ia-no-whatsapp-e-agentes-autonomos-o-que-e-mito-verdade-e-como-ajustar-sua-empresa): Análise técnica das regras da Meta API Oficial, intervenção do CADE, Shadow AI e governança Human-in-the-Loop.
+- [Do Google Planilhas ao ERP com IA e MCP Sem Programar](https://www.promptpulse.com.br/posts/do-google-planilhas-ao-erp-como-conectar-dados-financeiros-e-relatorios-com-ia-e-mcp-sem-programar): Conexão de dados financeiros, relatórios automáticos e gestão de caixa.
+- [Os 7 Maiores Erros de Empresários com IA, MCP e Vibe Coding](https://www.promptpulse.com.br/posts/os-7-maiores-erros-de-pequenos-e-medios-empresarios-com-ia-mcp-e-programacao-facil-em-2026): Guia de segurança, permissões READ-ONLY no MCP, teto de gastos de API e matriz de decisão técnica.
+
+### Claude AI, Negócios & Economia Regional (Campo Grande - MS)
+- [Claude AI e Automações em Campo Grande MS com MCP](https://www.promptpulse.com.br/posts/claude-ai-e-automacoes-em-campo-grande-ms-como-conectar-a-ia-da-anthropic-ao-seu-negocio-com-mcp-e-agentes-autonomos): Casos práticos de Claude Projects e MCP para agronegócio, clínicas, contabilidade e comércio.
+- [Falta de Mão de Obra e Rota Bioceânica em Campo Grande MS](https://www.promptpulse.com.br/posts/falta-de-mao-de-obra-e-rota-bioceanica-em-campo-grande-ms-como-escalar-sua-empresa-com-ia-e-mcp): Como escalar atendimento bilíngue (PT/ES) e operações enxutas com agentes de IA.
+- [Google Workspace e MCP nas Empresas do Brasil e MS](https://www.promptpulse.com.br/posts/google-workspace-e-mcp-como-a-conexao-de-apps-com-ia-esta-revolucionando-empresas-no-brasil-e-em-campo-grande-ms): Visão estratégica da integração entre Workspace e sistemas externos.
+
+### Produtividade, Google Gemini, Keep, Tarefas e Ciclos de Metas
+- [MCP e Produtividade: Gemini, Google Keep e Tarefas](https://www.promptpulse.com.br/posts/mcp-e-produtividade-como-conectar-gemini-google-keep-e-tarefas-a-qualquer-app): Método das 3 filas conectando captura rápida no Keep a execuções externas via MCP.
+- [Automações com Datas Predefinidas: Ciclos Semanais, Mensais e Metas](https://www.promptpulse.com.br/posts/automacoes-com-datas-predefinidas-como-fazer-a-ia-reconhecer-ciclos-semanais-mensais-e-suas-metas): Os 5 marcos temporais para dar consciência de calendário e ritmo (pacing) à IA.
+- [Do Google Keep ao Drive: Segundo Cérebro Automatizado com Gemini](https://www.promptpulse.com.br/posts/do-google-keep-ao-drive-como-criar-um-segundo-cerebro-automatizado-com-gemini): Organização inteligente de notas e documentos no Google Workspace.
+
+## Páginas Institucionais
+- [Sobre o PromptPulse e Marco Aurélio](https://www.promptpulse.com.br/sobre)
+- [Sitemap XML Completo](https://www.promptpulse.com.br/sitemap.xml)
+- [Versão Expandida para LLMs (llms-full.txt)](https://www.promptpulse.com.br/llms-full.txt)

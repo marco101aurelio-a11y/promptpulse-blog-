@@ -1,5 +1,6 @@
 ---
 title: "Como Reduzir 15 Horas Semanais de Trabalho Operacional na Sua Empresa em Campo Grande Usando IA"
+seoTitle: "Reduza 15h/Semana na Sua Empresa com IA | Campo Grande MS"
 date: "2026-10-26"
 excerpt: "Imagine recuperar 15 horas semanais de trabalho operacional para investir em estratégias de crescimento para sua empresa em Campo Grande. Com a Inteligência Art..."
 coverImage: "/covers/1e385f8f.png"

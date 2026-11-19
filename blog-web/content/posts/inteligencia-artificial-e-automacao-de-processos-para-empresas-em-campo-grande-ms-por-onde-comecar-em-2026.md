@@ -1,5 +1,6 @@
 ---
 title: "Inteligência Artificial e Automação de Processos para Empresas em Campo Grande MS: Por Onde Começar em 2026"
+seoTitle: "IA para Empresas em Campo Grande MS: Por Onde Começar"
 date: "2026-10-25"
 excerpt: "Em Campo Grande, MS, empresas que adotam inteligência artificial para automação de processos estão economizando horas de trabalho semanais e reduzindo custos de..."
 coverImage: "/covers/821f95d7.png"

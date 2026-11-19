@@ -1,5 +1,6 @@
 ---
 title: "Claude AI e Automações em Campo Grande MS: Como Conectar a IA da Anthropic ao Seu Negócio com MCP e Agentes Autônomos"
+seoTitle: "Claude AI e MCP em Campo Grande MS: Guia | PromptPulse"
 date: "2026-10-29"
 excerpt: "Descubra como empresários e gestores em Campo Grande MS estão usando o Claude AI, da Anthropic, aliado ao protocolo MCP para automatizar atendimento, contratos, financeiro e operações inteiras sem depender de código complexo."
 coverImage: "/covers/claude_cg_2026.jpg"

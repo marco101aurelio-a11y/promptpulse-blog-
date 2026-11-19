@@ -1,5 +1,6 @@
 ---
 title: "Google Workspace e MCP: Como a Conexão de Apps com IA Está Revolucionando Empresas no Brasil e em Campo Grande MS"
+seoTitle: "Google Workspace e MCP: IA Conectando Apps nas Empresas"
 date: "2026-10-25"
 excerpt: "Imagine recuperar 3 horas diárias apenas com a eliminação de tarefas repetitivas. Empresas em Campo Grande já estão alcançando isso integrando Google Workspace ..."
 coverImage: "/covers/72bf9ae1.png"

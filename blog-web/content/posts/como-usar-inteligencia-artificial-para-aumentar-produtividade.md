@@ -1,5 +1,6 @@
 ---
 title: "Como Usar Inteligência Artificial para Aumentar a Produtividade no Trabalho"
+seoTitle: "Como Usar IA para Aumentar Produtividade | PromptPulse"
 date: "2026-10-08"
 excerpt: "Descubra ferramentas e estratégias práticas de Inteligência Artificial para automatizar tarefas repetitivas, economizar até 10 horas por semana e focar no que realmente importa."
 coverImage: "https://images.pexels.com/photos/8439093/pexels-photo-8439093.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"

@@ -1,5 +1,6 @@
 ---
 title: "Os 7 Maiores Erros de Pequenos e Médios Empresários com IA, MCP e Programação Fácil em 2026"
+seoTitle: "7 Erros de Empresários com IA, MCP e Vibe Coding (2026)"
 date: "2026-11-06"
 excerpt: "Criar sistemas em minutos com IA e plugar bancos de dados via MCP nunca foi tão fácil — e é exatamente aí que mora o perigo para quem ignora segurança, arquitetura e processos. Conheça as 7 armadilhas que podem custar caro ao seu negócio."
 coverImage: "/covers/erros_empresarios_ia_mcp_vibe_coding_2026.jpg"

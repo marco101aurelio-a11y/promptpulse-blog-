@@ -1,5 +1,6 @@
 ---
 title: "Como Usar o Google Gemini para Automatizar Tarefas, Google Keep e Agenda em 2026"
+seoTitle: "Google Gemini com Keep, Tarefas e Agenda (2026) | PromptPulse"
 date: "2026-10-13"
 excerpt: "Descubra como integrar o Google Gemini com Keep, Tarefas e Agenda para criar fluxos de trabalho inteligentes, eliminando tarefas repetitivas na sua rotina."
 coverImage: "https://images.pexels.com/photos/33266805/pexels-photo-33266805.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"

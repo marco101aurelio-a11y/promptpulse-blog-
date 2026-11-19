@@ -1,5 +1,6 @@
 ---
 title: "Falta de Mão de Obra e Rota Bioceânica em Campo Grande MS: Como Escalar Sua Empresa com IA e MCP"
+seoTitle: "Rota Bioceânica e Falta de Mão de Obra MS: Escala com IA"
 date: "2026-10-31"
 excerpt: "Mato Grosso do Sul vive um paradoxo histórico: economia aquecida pela Rota Bioceânica e agroindústria, mas milhares de vagas abertas por falta de mão de obra. Veja como empresas de Campo Grande estão resolvendo esse gargalo com Agentes de IA e MCP."
 coverImage: "/covers/bioceanica_ia_cg_2026.jpg"

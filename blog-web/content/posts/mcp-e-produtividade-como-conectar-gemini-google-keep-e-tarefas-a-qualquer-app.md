@@ -1,5 +1,6 @@
 ---
 title: "MCP e Produtividade: Como Conectar Gemini, Google Keep e Tarefas a Qualquer App"
+seoTitle: "MCP e Produtividade: Gemini, Keep e Tarefas | PromptPulse"
 date: "2026-10-31"
 excerpt: "Suas anotações no Google Keep e checklists no Google Tarefas não precisam mais ficar isolados. Descubra como unir o Google Gemini ao protocolo MCP para transformar notas rápidas em ações automáticas nos sistemas da sua rotina e da sua empresa."
 coverImage: "/covers/mcp_keep_tarefas_gemini_2026.jpg"

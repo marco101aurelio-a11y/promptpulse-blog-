@@ -1,5 +1,6 @@
 ---
 title: "Google Ads, Meta Ads e MCP: Como a IA Dá Autonomia Total no Tráfego Pago para Pequenos e Médios Empresários em Campo Grande MS"
+seoTitle: "Google Ads, Meta Ads e MCP: Autonomia no Tráfego Pago"
 date: "2026-10-30"
 excerpt: "Chega de queimar verba de anúncios no escuro ou esperar relatórios no fim do mês. Veja como conectar Google Ads e Meta Ads à Inteligência Artificial via MCP para ter controle real de vendas, lucro e campanhas em Campo Grande MS."
 coverImage: "/covers/ads_mcp_cg_2026.jpg"

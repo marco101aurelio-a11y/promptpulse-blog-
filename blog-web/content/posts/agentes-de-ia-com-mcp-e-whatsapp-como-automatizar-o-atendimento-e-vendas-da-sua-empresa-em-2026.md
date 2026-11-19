@@ -1,5 +1,6 @@
 ---
 title: "Agentes de IA com MCP e WhatsApp: Como Automatizar o Atendimento e Vendas da Sua Empresa em 2026"
+seoTitle: "Agentes de IA no WhatsApp com MCP: Guia Vendas | PromptPulse"
 date: "2026-11-03"
 excerpt: "No Brasil, o WhatsApp é o balcão onde a venda acontece — ou onde ela morre por demora no atendimento. Aprenda a estruturar Agentes de IA conectados via MCP ao seu estoque, agenda e CRM para qualificar, cobrar no Pix e vender 24h por dia."
 coverImage: "/covers/agentes_whatsapp_mcp_vendas_2026.jpg"

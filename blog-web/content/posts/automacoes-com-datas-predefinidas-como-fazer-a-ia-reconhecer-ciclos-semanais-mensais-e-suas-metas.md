@@ -1,5 +1,6 @@
 ---
 title: "Automações com Datas Predefinidas: Como Fazer a IA Reconhecer Ciclos Semanais, Mensais e Suas Metas"
+seoTitle: "Automação de Metas com IA: Ciclos e Datas | PromptPulse"
 date: "2026-11-01"
 excerpt: "Uma automação inteligente não pode tratar o dia 1º igual ao dia 29. Aprenda a configurar datas-chave predefinidas para que a IA reconheça automaticamente o ciclo semanal, a virada do mês e o ritmo real da sua meta."
 coverImage: "/covers/ciclos_metas_ia_2026.jpg"

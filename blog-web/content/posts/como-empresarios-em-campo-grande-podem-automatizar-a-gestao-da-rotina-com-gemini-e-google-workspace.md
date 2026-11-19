@@ -1,5 +1,6 @@
 ---
 title: "Como Empresários em Campo Grande Podem Automatizar a Gestão da Rotina com Gemini e Google Workspace"
+seoTitle: "Automação Empresarial com Gemini em Campo Grande MS"
 date: "2026-10-24"
 excerpt: "Imagine passar o dia focando apenas no que realmente importa para o crescimento da sua empresa, sem se perder em tarefas repetitivas ou na organização desgastan..."
 coverImage: "/covers/07cee535.png"

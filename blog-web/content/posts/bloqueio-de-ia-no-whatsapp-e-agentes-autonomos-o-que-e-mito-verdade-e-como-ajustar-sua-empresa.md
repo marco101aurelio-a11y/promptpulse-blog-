@@ -1,5 +1,6 @@
 ---
 title: "Bloqueio de IA no WhatsApp e Agentes Autônomos: O Que É Mito, Verdade e Como Ajustar Sua Empresa"
+seoTitle: "Bloqueio de IA no WhatsApp: Mito vs Verdade | PromptPulse"
 date: "2026-11-02"
 excerpt: "As manchetes recentes sobre restrições da Meta a IAs no WhatsApp, intervenção do CADE e falhas de agentes autônomos assustaram muitos empresários. Separamos o hype da realidade técnica — com tabelas comparativas e arquitetura visual — para blindar sua operação."
 coverImage: "/covers/mitos_verdades_ia_whatsapp_2026.jpg"

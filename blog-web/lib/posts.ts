@@ -4,9 +4,15 @@ import matter from 'gray-matter';
 
 const postsDirectory = path.join(process.cwd(), 'content/posts');
 
+export interface PostFaq {
+  question: string;
+  answer: string;
+}
+
 export interface Post {
   slug: string;
   title: string;
+  seoTitle?: string;
   date: string;
   excerpt: string;
   coverImage: string;
@@ -20,6 +26,7 @@ export interface Post {
   readTime: string;
   content: string;
   featured?: boolean;
+  faq?: PostFaq[];
 }
 
 export function getAllPosts(): Post[] {
@@ -43,6 +50,7 @@ export function getAllPosts(): Post[] {
       return {
         slug,
         title: data.title || slug,
+        seoTitle: data.seoTitle || undefined,
         date: data.date || '2026-10-08',
         excerpt: data.excerpt || content.slice(0, 160).replace(/[#*`]/g, '') + '...',
         coverImage: data.coverImage || 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80',
@@ -55,7 +63,8 @@ export function getAllPosts(): Post[] {
         tags: data.tags || ['IA', 'Tecnologia', 'Produtividade'],
         readTime: data.readTime || calculatedReadTime,
         content,
-        featured: Boolean(data.featured)
+        featured: Boolean(data.featured),
+        faq: Array.isArray(data.faq) ? data.faq : undefined,
       } as Post;
     });
 
@@ -77,6 +86,7 @@ export function getPostBySlug(slug: string): Post | null {
     return {
       slug,
       title: data.title || slug,
+      seoTitle: data.seoTitle || undefined,
       date: data.date || '2026-10-08',
       excerpt: data.excerpt || content.slice(0, 160).replace(/[#*`]/g, '') + '...',
       coverImage: data.coverImage || 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80',
@@ -89,7 +99,8 @@ export function getPostBySlug(slug: string): Post | null {
       tags: data.tags || ['IA', 'Tecnologia', 'Produtividade'],
       readTime: data.readTime || calculatedReadTime,
       content,
-      featured: Boolean(data.featured)
+      featured: Boolean(data.featured),
+      faq: Array.isArray(data.faq) ? data.faq : undefined,
     } as Post;
   } catch {
     return null;

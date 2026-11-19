@@ -1,5 +1,6 @@
 ---
 title: "Do Keep ao Relatório Final: Como Integrar Tarefas, Drive, Docs e Conversa no Piloto Automático"
+seoTitle: "Do Keep ao Docs: Relatórios Automáticos com Gemini"
 date: "2026-10-17"
 excerpt: "Imagine capturar uma ideia no Google Keep e, minutos depois, ter um relatório profissional no Google Docs - sem um único copiar e colar. Parece mágica? É produt..."
 coverImage: "https://images.pexels.com/photos/8728106/pexels-photo-8728106.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"

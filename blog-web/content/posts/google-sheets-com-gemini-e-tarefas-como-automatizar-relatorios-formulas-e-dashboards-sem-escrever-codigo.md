@@ -1,5 +1,6 @@
 ---
 title: "Google Sheets com Gemini e Tarefas: Como Automatizar Relatórios, Fórmulas e Dashboards Sem Escrever Código"
+seoTitle: "Google Sheets com Gemini: Relatórios e Dashboards IA"
 date: "2026-10-24"
 excerpt: "Google Sheets com Gemini e Tarefas: Como Automatizar Relatórios, Fórmulas e Dashboards Sem Escrever Código Já passou horas configurando fórmulas complexas no Go..."
 coverImage: "/covers/0ac99137.png"

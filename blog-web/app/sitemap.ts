@@ -4,6 +4,7 @@ import { getAllPosts } from '@/lib/posts';
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.promptpulse.com.br';
+  const latestPostDate = posts[0]?.date || '2026-11-18';
 
   const postUrls = posts.map((post) => ({
     url: `${baseUrl}/posts/${post.slug}`,
@@ -15,21 +16,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: baseUrl,
-      lastModified: '2026-10-08',
+      lastModified: latestPostDate,
       changeFrequency: 'daily',
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/portifolio`,
-      lastModified: '2026-11-09',
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
       url: `${baseUrl}/sobre`,
-      lastModified: '2026-10-08',
+      lastModified: latestPostDate,
       changeFrequency: 'monthly',
-      priority: 0.5,
+      priority: 0.6,
     },
     {
       url: `${baseUrl}/politica-de-privacidade`,

@@ -1,5 +1,6 @@
 ---
 title: "Os 5 Melhores Prompts para Automatizar sua Rotina Diária e Poupar Horas"
+seoTitle: "5 Prompts de IA para Produtividade no Trabalho | PromptPulse"
 date: "2026-10-06"
 excerpt: "Copie e cole estes 5 templates de prompts prontos para transformar sua IA em um copiloto pessoal de alta performance no trabalho."
 coverImage: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"

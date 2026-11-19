@@ -1,5 +1,6 @@
 ---
 title: "Google Tarefas e Conversa com Gemini: Como Criar Automações Nativas Conectando Keep, Tarefas e Calendário"
+seoTitle: "Google Tarefas e Gemini: Automações Keep e Agenda"
 date: "2026-10-17"
 excerpt: "Sabe aquele momento em que você anota uma tarefa no Keep, mas ela desaparece no limbo digital? Ou quando marca uma reunião no Calendário, mas esquece de criar o..."
 coverImage: "https://images.pexels.com/photos/9574509/pexels-photo-9574509.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"

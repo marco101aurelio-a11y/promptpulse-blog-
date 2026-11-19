@@ -1,5 +1,6 @@
 ---
 title: "Do Google Planilhas ao ERP: Como Conectar Dados Financeiros e Relatórios com IA e MCP Sem Programar"
+seoTitle: "Google Planilhas ao ERP com IA e MCP Sem Código"
 date: "2026-10-28"
 excerpt: "Imagine conectar Google Planilhas ao seu ERP sem escrever código, transformando dados financeiros em relatórios automáticos e decisões estratégicas em tempo rea..."
 coverImage: "/covers/e22ac9f0.png"

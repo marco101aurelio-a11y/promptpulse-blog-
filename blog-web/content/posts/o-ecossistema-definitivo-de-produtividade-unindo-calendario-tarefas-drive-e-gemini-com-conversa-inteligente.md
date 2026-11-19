@@ -1,5 +1,6 @@
 ---
 title: "O Ecossistema Definitivo de Produtividade: Unindo Calendário, Tarefas, Drive e Gemini com Conversa Inteligente"
+seoTitle: "Agenda, Tarefas, Drive e Gemini: Ecossistema de IA"
 date: "2026-10-24"
 excerpt: "Você já imaginou ter um assistente pessoal integrado ao Google que cuida de todo o planejamento semanal, organização de tarefas e documentação no piloto automát..."
 coverImage: "https://images.pexels.com/photos/3582392/pexels-photo-3582392.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"

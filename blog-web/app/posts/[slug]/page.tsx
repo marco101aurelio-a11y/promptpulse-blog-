@@ -31,14 +31,16 @@ export async function generateMetadata({ params }: PostPageProps) {
     };
   }
 
+  const metaTitle = post.seoTitle || `${post.title} | PromptPulse`;
+
   return {
-    title: `${post.title} | PromptPulse`,
+    title: metaTitle,
     description: post.excerpt,
     alternates: {
       canonical: `/posts/${slug}`,
     },
     openGraph: {
-      title: post.title,
+      title: metaTitle,
       description: post.excerpt,
       images: [post.coverImage],
       type: 'article',
@@ -47,7 +49,7 @@ export async function generateMetadata({ params }: PostPageProps) {
     },
     twitter: {
       card: 'summary_large_image',
-      title: post.title,
+      title: metaTitle,
       description: post.excerpt,
       images: [post.coverImage],
     },
@@ -94,13 +96,66 @@ export default async function PostPage({ params }: PostPageProps) {
     },
   };
 
+  // BreadcrumbList JSON-LD para navegação estruturada no Google
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'PromptPulse',
+        item: 'https://www.promptpulse.com.br',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: post.category,
+        item: 'https://www.promptpulse.com.br/#artigos',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: post.seoTitle || post.title,
+        item: `https://www.promptpulse.com.br/posts/${post.slug}`,
+      },
+    ],
+  };
+
+  // FAQPage JSON-LD opcional (altamente citado por LLMs e Google AI Overviews)
+  const faqJsonLd =
+    post.faq && post.faq.length > 0
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: post.faq.map((item) => ({
+            '@type': 'Question',
+            name: item.question,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: item.answer,
+            },
+          })),
+        }
+      : null;
+
   return (
     <article className="min-h-screen pb-20">
-      {/* Script estruturado para SEO */}
+      {/* Scripts estruturados para SEO & GEO (LLMs) */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
 
       {/* Header do Artigo */}
       <div className="relative pt-8 pb-12 bg-neutral-950 border-b border-neutral-800/80">
