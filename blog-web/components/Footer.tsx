@@ -42,11 +42,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/portifolio" className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors">
-                  Portfólio Martech (Marco Aurélio)
-                </Link>
-              </li>
-              <li>
                 <Link href="/sobre" className="hover:text-cyan-400 transition-colors">
                   Sobre Nós
                 </Link>
