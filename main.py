@@ -64,24 +64,34 @@ def main():
     for item in active_keywords_list:
         topic = item['topic']
         keywords = item['keywords']
+        format_type = item.get('format', 'A_GUIA_ANSWER_FIRST')
+        icp = item.get('icp', 'Pequenos e Médios Empresários (Brasil)')
+        seo_title = item.get('seo_title')
         print(f"\n[Processando Tópico]: {topic}")
+        print(f"[Formato GEO]: {format_type} | [ICP]: {icp}")
         print(f"[Keywords de Apoio]: {', '.join(keywords)}")
 
         # Criar diretório único para guardar o backup local dos arquivos gerados (sanitizado para Windows)
         random_hash = uuid.uuid4().hex[:8]
         import re
-        clean_folder_name = re.sub(r'[\/:*?"<>|]', '_', topic).replace(' ', '_')
+        clean_folder_name = re.sub(r'[\/:*?"<>|]', '_', topic).replace(' ', '_')[:65]
         topic_directory = os.path.join(base_directory, f"{clean_folder_name}_{random_hash}")
         if not os.path.exists(topic_directory):
             os.makedirs(topic_directory)
 
-        # 2. Geração do Blog Post Original (DeepSeek V3 / Custo Baixíssimo)
-        print("Gerando o texto original do blog...")
-        original_post = generate_blog_post(topic, keywords, language=language)
+        # 2. Geração do Blog Post Original (SEO + GEO v2.0 com Answer-First, Tabelas e FAQ)
+        print("Gerando o texto original do blog (SEO + GEO v2.0)...")
+        original_post = generate_blog_post(
+            topic,
+            keywords,
+            language=language,
+            format_type=format_type,
+            icp=icp,
+        )
         save_to_file(topic_directory, "original_post.txt", original_post)
 
-        # 3. Auditoria e Otimização de SEO / Legibilidade
-        print("Auditando e otimizando o post para AdSense...")
+        # 3. Auditoria e Otimização de SEO / GEO (sem encurtar profundidade)
+        print("Auditando e otimizando o post para SEO, GEO e AdSense...")
         optimized_post = audit_blog_post(original_post)
         save_to_file(topic_directory, "optimized_post.txt", optimized_post)
 
@@ -122,16 +132,26 @@ def main():
                 shutil.copyfile(blog_cover_path, local_img_path)
                 image_downloaded = True
 
-        # 5. Publicação no Blog Next.js (Vercel)
-        category = item.get("category", "Inteligência Artificial")
+        # 5. Publicação no Blog Next.js (Vercel) com seoTitle, FAQPage JSON-LD e sync de llms-full.txt
+        category = item.get("category", "IA para Empresas & Negócios")
         post_slug = save_to_nextjs_blog(
             title=topic,
             content=optimized_post,
             image_url=image_url,
             category=category,
-            tags=keywords
+            tags=keywords,
+            seo_title=seo_title,
         )
         save_to_file(topic_directory, "blog_slug.txt", post_slug)
+
+        # 5.1 Ping automático do Sitemap no Google Search Console via Google Growth Suite
+        try:
+            import google_growth_suite
+            gsc_res = google_growth_suite.gsc_submit_sitemap()
+            if gsc_res.get("success"):
+                print("[OK] Sitemap reenviado automaticamente para o Google Search Console!")
+        except Exception as e:
+            print(f"[AVISO GSC] Não foi possível notificar o Search Console agora ({e}).")
 
         # 6. Publicação Automática no WordPress (Opcional se configurado)
         featured_image_id = None

@@ -41,8 +41,8 @@ def generate_dalle_image(prompt_text, dest_filename=None):
     clean_prompt = prompt_text[:950]
     clean_prompt += ", ultra high quality, clean composition, artistic lighting, no text, no words"
     
-    # Modelos disponíveis na sua conta (gpt-image-2 / gpt-image-1)
-    models_to_try = ["gpt-image-2", "gpt-image-1", "chatgpt-image-latest"]
+    # Modelos disponíveis na sua conta (gpt-image-2 / gpt-image-1.5 / chatgpt-image-latest)
+    models_to_try = ["gpt-image-2", "gpt-image-1.5", "chatgpt-image-latest"]
     
     response = None
     last_err = None
