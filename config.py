@@ -1,12 +1,14 @@
 # config.py
 import os
+import tempfile
+
 try:
     from dotenv import load_dotenv
     load_dotenv()
 except ImportError:
     pass
 
-# Chaves de API para geração de texto e imagens (carregadas a partir do .env)
+# Chaves de API para geração de texto e imagens (carregadas a partir do .env ou GitHub Secrets)
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 
@@ -28,7 +30,7 @@ WORDPRESS_APP_PASSWORD = os.getenv("WORDPRESS_APP_PASSWORD", "")
 DEFAULT_LANGUAGE = os.getenv("DEFAULT_LANGUAGE", "pt")
 SUPPORTED_LANGUAGES = ["en", "pt", "es"]
 
-# Configurações do Google Analytics 4 (Data API)
+# Configurações do Google Cloud / GA4 / Search Console / Tag Manager
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 GA_CREDENTIALS_FILE = os.getenv("GOOGLE_APPLICATION_CREDENTIALS", "projeto-blog-automatico-494221-a5d1909a3d90.json")
 if not os.path.isabs(GA_CREDENTIALS_FILE):
@@ -36,4 +38,12 @@ if not os.path.isabs(GA_CREDENTIALS_FILE):
 else:
     GA_CREDENTIALS_PATH = GA_CREDENTIALS_FILE
 
-GA_PROPERTY_ID = os.getenv("GA_PROPERTY_ID", "")
+# Suporte para nuvem (GitHub Actions / Docker): materializa o JSON a partir do Secret GOOGLE_CREDENTIALS_JSON
+_raw_google_json = os.getenv("GOOGLE_CREDENTIALS_JSON", "").strip()
+if _raw_google_json and not os.path.exists(GA_CREDENTIALS_PATH):
+    _tmp_sa_path = os.path.join(tempfile.gettempdir(), "promptpulse_google_sa.json")
+    with open(_tmp_sa_path, "w", encoding="utf-8") as _f:
+        _f.write(_raw_google_json)
+    GA_CREDENTIALS_PATH = _tmp_sa_path
+
+GA_PROPERTY_ID = os.getenv("GA_PROPERTY_ID", "558342687")

@@ -34,29 +34,41 @@ def main():
         os.makedirs(temp_img_directory)
 
     # 1. Obter a lista de tópicos e palavras-chave.
-    # Podemos usar uma palavra semente piloto para gerar dinamicamente, ou usar a lista estática keywords.py
-    seed_keyword = os.getenv("SEED_KEYWORD", "") # Defina no ambiente ou config se desejar usar o Keyword Engine
+    # Prioridade: CUSTOM_TOPIC (manual no GitHub Actions) > SEED_KEYWORD > Fila keywords.py > Auto-Pauta Infinita
+    custom_topic = os.getenv("CUSTOM_TOPIC", "").strip()
+    seed_keyword = os.getenv("SEED_KEYWORD", "").strip()
     language = DEFAULT_LANGUAGE  # en, pt ou es
 
-    if seed_keyword:
+    if custom_topic:
+        print(f"=== Modo Tópico Personalizado (Manual): '{custom_topic}' ===")
+        active_keywords_list = [{
+            "topic": custom_topic,
+            "seo_title": custom_topic[:58],
+            "format": os.getenv("CUSTOM_FORMAT", "A_GUIA_ANSWER_FIRST"),
+            "icp": os.getenv("CUSTOM_ICP", "Pequenos e Médios Empresários (Brasil)"),
+            "category": "IA para Empresas & Negócios",
+            "keywords": [custom_topic.lower(), "ia para empresas", "mcp automacao", "lucro real anuncios", "promptpulse"],
+        }]
+    elif seed_keyword:
         print(f"=== Iniciando Keyword Engine com a semente: '{seed_keyword}' (Idioma: {language}) ===")
         raw_suggestions = extract_long_tail_keywords(seed_keyword, language=language, depth_a_to_z=False)
-        # Limitamos a 3 artigos por execução do piloto para não estourar tempo/tokens de teste
         active_keywords_list = format_suggestions_for_generation(raw_suggestions, max_results=3)
     else:
-        print("=== Usando a lista de palavras-chave estática do keywords.py ===")
-        # Filtrar tópicos que já foram publicados para pegar sempre o próximo inédito da fila
+        print("=== Usando a fila editorial SEO + GEO (keywords.py) ===")
         from publish_markdown import slugify
         blog_posts_dir = os.path.join(os.path.dirname(__file__), "blog-web", "content", "posts")
         existing_slugs = {os.path.splitext(f)[0] for f in os.listdir(blog_posts_dir) if f.endswith(".md")} if os.path.exists(blog_posts_dir) else set()
-        
+
         unpublished = [item for item in KEYWORDS_LIST if slugify(item['topic']) not in existing_slugs]
         if unpublished:
-            print(f"Encontrados {len(unpublished)} tópicos inéditos. Processando o próximo da fila...")
+            print(f"Encontrados {len(unpublished)} tópicos inéditos na fila. Processando o próximo...")
             active_keywords_list = [unpublished[0]]
         else:
-            print("Todos os tópicos do cluster já foram publicados! Usando o primeiro para regeneração.")
-            active_keywords_list = [KEYWORDS_LIST[0]]
+            print("Todos os tópicos da fila estática já foram publicados! Acionando Auto-Pauta Infinita...")
+            from auto_topic_planner import generate_next_autonomous_topic
+            next_auto_item = generate_next_autonomous_topic(existing_slugs)
+            print(f"[Auto-Pauta Gerada]: {next_auto_item['topic']}")
+            active_keywords_list = [next_auto_item]
 
     print(f"Total de tópicos a processar: {len(active_keywords_list)}")
     print("="*60)
