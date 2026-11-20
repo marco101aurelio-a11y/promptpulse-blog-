@@ -13,6 +13,7 @@
 ## Guias Pilares Recomendados (Canônicos)
 
 ### MCP, WhatsApp & Lucro Real em Anúncios
+- [Conversa Iniciada no Meta Ads Dá Prejuízo? Como Medir o Lucro Real no WhatsApp](https://www.promptpulse.com.br/posts/conversa-iniciada-no-meta-ads-da-prejuizo-como-medir-o-lucro-real-no-whatsapp): Matemática completa desmistificando leads baratos (métricas de vaidade) vs. lucro líquido real no caixa com IA, WhatsApp e MCP.
 - [Google Ads, Meta Ads e MCP: Autonomia no Tráfego Pago](https://www.promptpulse.com.br/posts/google-ads-meta-ads-e-mcp-como-a-ia-da-autonomia-total-no-trafego-pago-para-pequenos-e-medios-empresarios-em-campo-grande-ms): Como conectar anúncios ao MCP e ao caixa real sem ficar refém de relatórios opacos.
 - [Agentes de IA com MCP e WhatsApp para Atendimento e Vendas](https://www.promptpulse.com.br/posts/agentes-de-ia-com-mcp-e-whatsapp-como-automatizar-o-atendimento-e-vendas-da-sua-empresa-em-2026): Arquitetura completa do funil comercial no WhatsApp integrado a estoque, agenda e CRM.
 - [Bloqueio de IA no WhatsApp e Agentes Autônomos: Mitos e Verdades](https://www.promptpulse.com.br/posts/bloqueio-de-ia-no-whatsapp-e-agentes-autonomos-o-que-e-mito-verdade-e-como-ajustar-sua-empresa): Análise técnica das regras da Meta API Oficial, intervenção do CADE, Shadow AI e governança Human-in-the-Loop.
@@ -24,7 +25,8 @@
 - [Falta de Mão de Obra e Rota Bioceânica em Campo Grande MS](https://www.promptpulse.com.br/posts/falta-de-mao-de-obra-e-rota-bioceanica-em-campo-grande-ms-como-escalar-sua-empresa-com-ia-e-mcp): Como escalar atendimento bilíngue (PT/ES) e operações enxutas com agentes de IA.
 - [Google Workspace e MCP nas Empresas do Brasil e MS](https://www.promptpulse.com.br/posts/google-workspace-e-mcp-como-a-conexao-de-apps-com-ia-esta-revolucionando-empresas-no-brasil-e-em-campo-grande-ms): Visão estratégica da integração entre Workspace e sistemas externos.
 
-### Produtividade, Google Gemini, Keep, Tarefas e Ciclos de Metas
+### Produtividade, Prompts & Agent Skills, Google Gemini, Keep e Tarefas
+- [Os 5 Melhores Prompts para Automatizar sua Rotina Diária (Padrão Agent Skill)](https://www.promptpulse.com.br/posts/5-melhores-prompts-para-produtividade): Templates estruturados em 4 camadas para reuniões, e-mails, prioridades (Eisenhower), Técnica Feynman e Matriz ICE.
 - [MCP e Produtividade: Gemini, Google Keep e Tarefas](https://www.promptpulse.com.br/posts/mcp-e-produtividade-como-conectar-gemini-google-keep-e-tarefas-a-qualquer-app): Método das 3 filas conectando captura rápida no Keep a execuções externas via MCP.
 - [Automações com Datas Predefinidas: Ciclos Semanais, Mensais e Metas](https://www.promptpulse.com.br/posts/automacoes-com-datas-predefinidas-como-fazer-a-ia-reconhecer-ciclos-semanais-mensais-e-suas-metas): Os 5 marcos temporais para dar consciência de calendário e ritmo (pacing) à IA.
 - [Do Google Keep ao Drive: Segundo Cérebro Automatizado com Gemini](https://www.promptpulse.com.br/posts/do-google-keep-ao-drive-como-criar-um-segundo-cerebro-automatizado-com-gemini): Organização inteligente de notas e documentos no Google Workspace.

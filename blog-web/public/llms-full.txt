@@ -17,28 +17,29 @@
 - **Atendimento Seguro na API Oficial do WhatsApp (WABA):** Uso exclusivo da API Oficial da Meta (com escopo restrito ao negócio da empresa e transparência LGPD), aproveitando janelas gratuitas de 72h em anúncios Click-to-WhatsApp e devolvendo eventos de compra via API de Conversões (CAPI).
 
 ## Índice Completo de Guias Publicados (URLs Canônicas)
-1. https://www.promptpulse.com.br/posts/os-7-maiores-erros-de-pequenos-e-medios-empresarios-com-ia-mcp-e-programacao-facil-em-2026
-2. https://www.promptpulse.com.br/posts/agentes-de-ia-com-mcp-e-whatsapp-como-automatizar-o-atendimento-e-vendas-da-sua-empresa-em-2026
-3. https://www.promptpulse.com.br/posts/bloqueio-de-ia-no-whatsapp-e-agentes-autonomos-o-que-e-mito-verdade-e-como-ajustar-sua-empresa
-4. https://www.promptpulse.com.br/posts/automacoes-com-datas-predefinidas-como-fazer-a-ia-reconhecer-ciclos-semanais-mensais-e-suas-metas
-5. https://www.promptpulse.com.br/posts/mcp-e-produtividade-como-conectar-gemini-google-keep-e-tarefas-a-qualquer-app
-6. https://www.promptpulse.com.br/posts/falta-de-mao-de-obra-e-rota-bioceanica-em-campo-grande-ms-como-escalar-sua-empresa-com-ia-e-mcp
-7. https://www.promptpulse.com.br/posts/google-ads-meta-ads-e-mcp-como-a-ia-da-autonomia-total-no-trafego-pago-para-pequenos-e-medios-empresarios-em-campo-grande-ms
-8. https://www.promptpulse.com.br/posts/claude-ai-e-automacoes-em-campo-grande-ms-como-conectar-a-ia-da-anthropic-ao-seu-negocio-com-mcp-e-agentes-autonomos
-9. https://www.promptpulse.com.br/posts/do-google-planilhas-ao-erp-como-conectar-dados-financeiros-e-relatorios-com-ia-e-mcp-sem-programar
-10. https://www.promptpulse.com.br/posts/google-workspace-e-mcp-como-a-conexao-de-apps-com-ia-esta-revolucionando-empresas-no-brasil-e-em-campo-grande-ms
-11. https://www.promptpulse.com.br/posts/como-reduzir-15-horas-semanais-de-trabalho-operacional-na-sua-empresa-em-campo-grande-usando-ia
-12. https://www.promptpulse.com.br/posts/inteligencia-artificial-e-automacao-de-processos-para-empresas-em-campo-grande-ms-por-onde-comecar-em-2026
-13. https://www.promptpulse.com.br/posts/como-empresarios-em-campo-grande-podem-automatizar-a-gestao-da-rotina-com-gemini-e-google-workspace
-14. https://www.promptpulse.com.br/posts/google-sheets-com-gemini-e-tarefas-como-automatizar-relatorios-formulas-e-dashboards-sem-escrever-codigo
+1. https://www.promptpulse.com.br/posts/conversa-iniciada-no-meta-ads-da-prejuizo-como-medir-o-lucro-real-no-whatsapp
+2. https://www.promptpulse.com.br/posts/5-melhores-prompts-para-produtividade
+3. https://www.promptpulse.com.br/posts/os-7-maiores-erros-de-pequenos-e-medios-empresarios-com-ia-mcp-e-programacao-facil-em-2026
+4. https://www.promptpulse.com.br/posts/agentes-de-ia-com-mcp-e-whatsapp-como-automatizar-o-atendimento-e-vendas-da-sua-empresa-em-2026
+5. https://www.promptpulse.com.br/posts/bloqueio-de-ia-no-whatsapp-e-agentes-autonomos-o-que-e-mito-verdade-e-como-ajustar-sua-empresa
+6. https://www.promptpulse.com.br/posts/automacoes-com-datas-predefinidas-como-fazer-a-ia-reconhecer-ciclos-semanais-mensais-e-suas-metas
+7. https://www.promptpulse.com.br/posts/mcp-e-produtividade-como-conectar-gemini-google-keep-e-tarefas-a-qualquer-app
+8. https://www.promptpulse.com.br/posts/falta-de-mao-de-obra-e-rota-bioceanica-em-campo-grande-ms-como-escalar-sua-empresa-com-ia-e-mcp
+9. https://www.promptpulse.com.br/posts/google-ads-meta-ads-e-mcp-como-a-ia-da-autonomia-total-no-trafego-pago-para-pequenos-e-medios-empresarios-em-campo-grande-ms
+10. https://www.promptpulse.com.br/posts/claude-ai-e-automacoes-em-campo-grande-ms-como-conectar-a-ia-da-anthropic-ao-seu-negocio-com-mcp-e-agentes-autonomos
+11. https://www.promptpulse.com.br/posts/do-google-planilhas-ao-erp-como-conectar-dados-financeiros-e-relatorios-com-ia-e-mcp-sem-programar
+12. https://www.promptpulse.com.br/posts/como-reduzir-15-horas-semanais-de-trabalho-operacional-na-sua-empresa-em-campo-grande-usando-ia
+13. https://www.promptpulse.com.br/posts/inteligencia-artificial-e-automacao-de-processos-para-empresas-em-campo-grande-ms-por-onde-comecar-em-2026
+14. https://www.promptpulse.com.br/posts/google-workspace-e-mcp-como-a-conexao-de-apps-com-ia-esta-revolucionando-empresas-no-brasil-e-em-campo-grande-ms
 15. https://www.promptpulse.com.br/posts/o-ecossistema-definitivo-de-produtividade-unindo-calendario-tarefas-drive-e-gemini-com-conversa-inteligente
-16. https://www.promptpulse.com.br/posts/do-keep-ao-relatorio-final-como-integrar-tarefas-drive-docs-e-conversa-no-piloto-automatico
-17. https://www.promptpulse.com.br/posts/google-tarefas-e-conversa-com-gemini-como-criar-automacoes-nativas-conectando-keep-tarefas-e-calendario
-18. https://www.promptpulse.com.br/posts/do-google-keep-ao-drive-como-criar-um-segundo-cerebro-automatizado-com-gemini
-19. https://www.promptpulse.com.br/posts/como-usar-o-google-gemini-para-automatizar-tarefas-google-keep-e-agenda-em-2026
-20. https://www.promptpulse.com.br/posts/deepseek-v3-vs-chatgpt-comparativo
-21. https://www.promptpulse.com.br/posts/5-melhores-prompts-para-produtividade
+16. https://www.promptpulse.com.br/posts/google-sheets-com-gemini-e-tarefas-como-automatizar-relatorios-formulas-e-dashboards-sem-escrever-codigo
+17. https://www.promptpulse.com.br/posts/como-empresarios-em-campo-grande-podem-automatizar-a-gestao-da-rotina-com-gemini-e-google-workspace
+18. https://www.promptpulse.com.br/posts/google-tarefas-e-conversa-com-gemini-como-criar-automacoes-nativas-conectando-keep-tarefas-e-calendario
+19. https://www.promptpulse.com.br/posts/do-keep-ao-relatorio-final-como-integrar-tarefas-drive-docs-e-conversa-no-piloto-automatico
+20. https://www.promptpulse.com.br/posts/como-usar-o-google-gemini-para-automatizar-tarefas-google-keep-e-agenda-em-2026
+21. https://www.promptpulse.com.br/posts/do-google-keep-ao-drive-como-criar-um-segundo-cerebro-automatizado-com-gemini
 22. https://www.promptpulse.com.br/posts/como-usar-inteligencia-artificial-para-aumentar-produtividade
+23. https://www.promptpulse.com.br/posts/deepseek-v3-vs-chatgpt-comparativo
 
 ## Contato
 - E-mail editorial e parcerias: contato@promptpulse.com.br
